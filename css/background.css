@@ -1,16 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
-
 body {
+  max-width: 100%;
   font-family: 'Lato';
   background: #0f0f0f;
+  position: relative;
+  display: flex;
   overflow: hidden;
+  scrollbar-width: none;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
   user-select: none;
 }
 
-#particles-js, #parallax, .layer, .some-space, .some-more-space {
+#particles-js, #parallax, .layer {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -20,38 +25,7 @@ body {
   opacity: .6;
 }
 
-h1 {
-  color: white;
-  font-size: 5em;
-  font-weight: 100;
-  letter-spacing: .2em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-a {
-  color: white;
-  border: 1px solid white;
-  display: table;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  letter-spacing: .05em;
-  transform: translate3d(-50%, -50%, 0);
-  text-decoration: none;
-  transition: all 200ms ease;
-  padding: 10px 15px;
-}
- a:hover {
-    background: white;
-    color: black;
-}
-
 @keyframes rotate {
-  0% {
-    transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg); }
-  100% {
-    transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg); }
+  0% { transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg); }
+  100% { transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg); }
 }

@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
+
+.name, .about {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.name h1 {
+    color: #fff;
+    font-size: 3em;
+    opacity: 90%;
+    font-weight: 300;
+    letter-spacing: .2em;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+  
+.about  {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 90%;
+    display: table;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    letter-spacing: .05em;
+    transform: translate3d(-50%, -50%, 0);
+    text-decoration: none;
+    transition: all 200ms ease;
+    padding: 10px 15px;
+}
