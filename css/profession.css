@@ -1,7 +1,7 @@
 
-h3 {
-    max-width: 300px;
-}
+/* h3 {
+    max-width: 300;
+} */
 h3[data-scroll='in'] [data-char]:after {
     animation-name: glitch-switch;
 }
@@ -40,17 +40,26 @@ h3:nth-of-type(1) {
 }
  
 .profession {
-align-items: center;
-display: flex;
-height: 100vh;
-justify-content: center;
-position: relative;
-scroll-snap-align: center;
-width: 100vw;
-opacity: 70%;
-top: 25%;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 100vw;
+    opacity: 70%;
+    top: 31% !important;
 }
-
+.ctr{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 100vw;
+    opacity: 70%;
+    top: 31% !important;
+}
 
 @-moz-keyframes glitch-switch {
 0% {

@@ -1,25 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 
-.name, .about {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
 
-.name h1 {
+h1 {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    text-align: center;
     color: #fff;
     font-size: 3em;
     opacity: 90%;
     font-weight: 300;
     letter-spacing: .2em;
     position: absolute;
-    top: 25%;
+    top: 22%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
+    
 }
+
+
+
+
+
+
+
+
+
+
+
 
   
 .about  {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 90%;

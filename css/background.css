@@ -1,13 +1,19 @@
+*{
+  margin: 0;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
 body {
+  margin: auto;
   max-width: 100%;
   font-family: 'Lato';
   background: #0f0f0f;
-  position: relative;
+  position: static; /*  absolute */
   display: flex;
-  overflow: hidden;
-  scrollbar-width: none;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  /* min-height: 100%; */
+  /* min-width: 100%; */
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -29,3 +35,10 @@ body {
   0% { transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg); }
   100% { transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg); }
 }
+
+
+/* @media (min-width:600px) {
+  .layer[data-depth] {
+    content: attr(data-depth) "3.0";
+  }
+} */

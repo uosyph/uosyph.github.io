@@ -5,11 +5,10 @@ $('#parallax').parallax({
 	 frictionY: .1
 });
 
-
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 120,
+      "value": 120,     // particles frequency, gets laggy with high values
       "density": {
         "enable": true,
         "value_area": 800
@@ -79,18 +78,18 @@ particlesJS("particles-js", {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,     
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,    
         "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 140,
+        "distance": 110,   
         "line_linked": {
           "opacity": 1
         }
