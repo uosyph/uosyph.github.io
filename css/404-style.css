@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
+
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  font-family: 'Lato';
+  background: #0f0f0f;
+  position: static;
+  display: flex;
+  height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+#particles-js, #parallax, .layer {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#particles-js {
+  opacity: .6;
+}
+
+@keyframes rotate {
+  0% { transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg); }
+  100% { transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg); }
+}
+
+
+
+
+
+.firstSect {
+    display: inline;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+}
+
+/* 404 */
+.notFound {
+    color: #fff;
+    opacity: 80%;
+    font-size: 80px;
+    letter-spacing: 0.25em;
+}
+
+/* Where are you? */
+#glitch {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 15%;
+}
+#glitch {
+    font-weight: 100;
+    font-size: 28px;
+    color: #FAFAFA;
+}
+#glitch > .text > .dud {
+    color: rgb(255, 0, 130);
+}
+#glitch {
+    animation: 1500ms infinite normal glitch;
+}
+#glitch > span#cursor {
+    animation: 1500ms infinite normal cursor;
+}
+
+@keyframes glitch {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    40% {
+        opacity: 1;
+        left: -2px;
+    }
+    80% {
+        opacity: 1;
+        left: -2px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+@keyframes cursor {
+    0% {
+        opacity: 0;
+        left: 0px;
+    }
+    40% {
+        opacity: 0;
+        left: -2px;
+    }
+    80% {
+        opacity: 1;
+        left: -2px;
+    }
+    100% {
+        opacity: 0;
+        left: 0px;
+    }
+}
+
+
+/* Let's go Home <3 */
+.homeBtn {
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255, 0, 130, 0.5);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    /* transition: transform ease-in-out 0.1s, box-shadow ease-in-out 1s; */
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.homeBtn:hover {
+    background-color: rgba(240, 240, 240, 0.5);
+    /* transition: transform ease-in-out 0.1s, box-shadow ease-in-out 1s; */
+    box-shadow: 0 2px 25px rgba(240, 240, 240, 0.5);
+}

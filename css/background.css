@@ -1,23 +1,34 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow-x: hidden; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+*:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-  margin: auto;
+  margin: 0;
+  padding: 0;
   max-width: 100%;
   font-family: 'Lato';
   background: #0f0f0f;
   position: static;
   display: flex;
   height: 100vh;
-  /* min-height: 100%; */
-  /* min-width: 100%; */
+  min-height: 100%;
+  min-width: 100%;
   width: 100%;
   align-items: center;
   justify-content: center;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   user-select: none;
 }
 
