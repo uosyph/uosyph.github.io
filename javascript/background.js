@@ -78,18 +78,18 @@ particlesJS("particles-js", {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,     
+        "enable": false,     // connects the particles to the cursor
         "mode": "grab"
       },
       "onclick": {
-        "enable": false,    
+        "enable": false,    // adds particles on mouse click
         "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 110,   
+        "distance": 110,   // how far can it reach the cursor
         "line_linked": {
           "opacity": 1
         }

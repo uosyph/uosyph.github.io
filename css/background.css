@@ -1,6 +1,6 @@
 *{
   margin: 0;
-  padding: 0 !important;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -9,7 +9,7 @@ body {
   max-width: 100%;
   font-family: 'Lato';
   background: #0f0f0f;
-  position: static; /*  absolute */
+  position: static;
   display: flex;
   height: 100vh;
   /* min-height: 100%; */
