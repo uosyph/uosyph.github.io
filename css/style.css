@@ -1,5 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 
+.firtSect {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: inline-block;
+    position: relative;
+    scroll-snap-align: center;
+    align-items: center;
+    height: 100vh !important;
+    top: 0 !important;
+    left: 0 !important;
+}
 
 .name h1 {
     margin: auto;
@@ -19,6 +31,27 @@
     transform: translate3d(-50%, -50%, 0);
 }
 
+#glitch {
+    margin: 0;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: -9.2%;
+    top: 0;
+    left: 0;
+    position: relative;
+    scroll-snap-align: center;
+    opacity: 70% !important;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    color: #FAFAFA;
+    font-weight: 300;
+}
+#glitch > .text > .dud {
+    color: rgb(255, 0, 130);
+    opacity: 70%;
+}
  
 .about {
     display: block;
@@ -35,7 +68,7 @@
     letter-spacing: .08em;
 }
 .title .firstPart {
-    color: #9fcddb;
+    color: rgb(28, 226, 226);
     letter-spacing: -0.01em;
 }
 .title .secondPart {

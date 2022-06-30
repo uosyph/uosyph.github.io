@@ -2,7 +2,7 @@
 /* h3 {
     max-width: 300;
 } */
-h3[data-scroll='in'] [data-char]:after {
+/* h3[data-scroll='in'] [data-char]:after {
     animation-name: glitch-switch;
 }
 .reveal--0 [data-char]:after {
@@ -198,4 +198,5 @@ h3:nth-of-type(1) {
 100% {
     content: var(--char-0);
 }
-}
+} */
+

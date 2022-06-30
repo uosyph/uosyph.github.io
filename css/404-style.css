@@ -54,79 +54,44 @@ body {
 
 
 .firstSect {
-    display: inline;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
     text-align: center;
-    top: 30%;
-    left: 50%;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
 }
 
 /* 404 */
 .notFound {
+    justify-content: center;
+    display: inline-block;
     color: #fff;
     opacity: 80%;
-    font-size: 80px;
+    font-size: 90px;
     letter-spacing: 0.25em;
+    position: relative;
+    left: 0;
+    top: 120px;
 }
 
 /* Where are you? */
 #glitch {
-    height: 100%;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     display: flex;
     margin-top: 15%;
-}
-#glitch {
     font-weight: 100;
-    font-size: 28px;
+    font-size: 22px;
     color: #FAFAFA;
+    letter-spacing: 0.25em !important;
 }
 #glitch > .text > .dud {
     color: rgb(255, 0, 130);
-}
-#glitch {
-    animation: 1500ms infinite normal glitch;
-}
-#glitch > span#cursor {
-    animation: 1500ms infinite normal cursor;
-}
-
-@keyframes glitch {
-    0% {
-        opacity: 1;
-        left: 0px;
-    }
-    40% {
-        opacity: 1;
-        left: -2px;
-    }
-    80% {
-        opacity: 1;
-        left: -2px;
-    }
-    100% {
-        opacity: 1;
-        left: 0px;
-    }
-}
-@keyframes cursor {
-    0% {
-        opacity: 0;
-        left: 0px;
-    }
-    40% {
-        opacity: 0;
-        left: -2px;
-    }
-    80% {
-        opacity: 1;
-        left: -2px;
-    }
-    100% {
-        opacity: 0;
-        left: 0px;
-    }
 }
 
 
@@ -134,22 +99,25 @@ body {
 .homeBtn {
     display: inline-block;
     font-size: 1em;
-    padding: 1em 2em;
+    padding: 11px 21px;
+    letter-spacing: 0.3em;
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     -webkit-appearance: none;
     appearance: none;
-    background-color: rgba(255, 0, 130, 0.5);
+    background-color: rgba(28, 226, 226, 0.5);
     color: #fff;
+    opacity: 90%;
     border-radius: 4px;
     border: none;
     cursor: pointer;
     position: relative;
-    /* transition: transform ease-in-out 0.1s, box-shadow ease-in-out 1s; */
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    transition: transform ease-in-out .4s, box-shadow ease-in-out .4s, background-color ease-in-out .4s;
+    box-shadow: 0 2px 25px rgba(28, 226, 226, 0.5);
 }
 .homeBtn:hover {
-    background-color: rgba(240, 240, 240, 0.5);
-    /* transition: transform ease-in-out 0.1s, box-shadow ease-in-out 1s; */
-    box-shadow: 0 2px 25px rgba(240, 240, 240, 0.5);
+    background-color: rgba(255, 0, 130, 0.5);
+    transition: transform ease-in-out .4s, box-shadow ease-in-out .4s, background-color ease-in-out .4s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    opacity: 90%;
 }

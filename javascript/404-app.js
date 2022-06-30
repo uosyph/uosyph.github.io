@@ -2,7 +2,7 @@
 class TextScramble {
 constructor(el) {
     this.el = el
-    this.chars = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/' // '!<>-_\\/[]{}—=+*^?#________'
+    this.chars = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/' // '!<>-_\\/[]{}—=+*^?#________'
     this.update = this.update.bind(this)
 }
 setText(newText) {
@@ -55,9 +55,9 @@ randomChar() {
 
 
 const phrases = [
-    'Houston, we have a problem.'
-    // 'What are you looking for?',
-    // 'There is nothing to see here'
+    'Houston, we have a problem!'
+    // 'you haven't found it yet!',
+    // 'just keep looking :]'
 ]
 
 const el = document.querySelector('.text')
@@ -65,8 +65,15 @@ const fx = new TextScramble(el)
 
 let counter = 0
 const next = () => {
+
+// generating number in (x-y range) to reapet the animation
+    function generateRandomIntegerInRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let rndmNum = generateRandomIntegerInRange(100, 4000);
+
     fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 10000)     // repeat timer
+        setTimeout(next, rndmNum)     // frequency
     })
 counter = (counter + 1) % phrases.length
 
