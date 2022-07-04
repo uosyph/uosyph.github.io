@@ -62,6 +62,6 @@
     transition: opacity .7s ease-in-out;
 }
 .soon:hover {
-    /* transition: opacity 90% ease-in-out .5s; */
+    transition: opacity .7s ease-in-out;
     opacity: 90%;
 }
