@@ -1,46 +1,60 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
 
-.firtSect {
+* {
     margin: 0;
     padding: 0;
-    justify-content: center;
-    display: inline-block;
-    position: relative;
-    scroll-snap-align: center;
-    align-items: center;
-    height: 100vh !important;
-    top: 0 !important;
-    left: 0 !important;
+    box-sizing: border-box;
 }
 
-.name h1 {
-    margin: auto;
-    display: flex;
-    justify-content: center;
+body {
+    font-family: 'Lato';
+    background: #0f0f0f;
+    height: 100vh;
+    width: 100%;
+    user-select: none;
+}
+
+
+/* background particles */
+#particles-js, #parallax, .layer {
+    height: 100%;
     position: absolute;
-    word-wrap: inherit;
+    width: 100%;
+}
+#particles-js {
+    opacity: .6;
+}  
+
+
+/* About Section */
+.aboutSect {
+    display: inline-block;
+    width: 100%;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Name */
+.name h1 {
     color: #fff;
     text-align: center;
-    text-decoration: none;
-    font-size: 3.5em;
+    font-size: 64px;
     opacity: 90%;
     font-weight: 300;
     letter-spacing: .2em;
-    top: 28%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
 }
 
+
+/* glitch like effect */
 #glitch {
     width: 100vw;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 19%;
-    top: 0;
-    left: 0;
+    margin-top: 40px;
     position: absolute;
-    scroll-snap-align: center;
     opacity: 70% !important;
     font-size: 20px;
     letter-spacing: 0.15em;
@@ -51,17 +65,56 @@
     color: rgb(255, 0, 130);
     opacity: 70%;
 }
- 
-.soon {
+
+
+.about p {
+    margin-top: 130px;
+    padding-inline: 15px;
     color: #fff;
-    opacity: 55%;
-    font-size: 15px;
-    letter-spacing: 3px;
-    margin-top: 110%;
-    justify-content: center;
-    transition: opacity .7s ease-in-out;
-}
-.soon:hover {
-    transition: opacity .7s ease-in-out;
+    text-align: center;
+    font-size: 17px;
     opacity: 90%;
+    font-weight: 300;
+    letter-spacing: .2em;
+}
+
+.skills h4 {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    opacity: 80%;
+    font-weight: 300;
+    letter-spacing: .2em;
+}
+
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 200px));
+    gap: 0px 10px;
+    justify-content: center;
+
+    
+    overflow: hidden;
+    margin-top: 35px;
+    list-style-type: none;
+    color: #fff;
+    /* text-align: center; */
+    font-size: 14px;
+    opacity: 80%;
+    font-weight: 300;
+    letter-spacing: .2em;
+}
+.skills ul li {
+    position: relative;
+    padding: 10px;
+}
+
+
+.skills ul li::before {
+    margin-left: 25%;
+    content: "\25B9";
+    padding-right: 8px;
+    color: cyan;
 }
