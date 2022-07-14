@@ -55,7 +55,7 @@ randomChar() {
 
 
 const phrases = [
-    'Software Developer .'
+    'Software Developer'
     // 'What are you looking for?',
     // 'There is nothing to see here'
 ]
@@ -81,3 +81,17 @@ counter = (counter + 1) % phrases.length
 }
 
 next()
+
+
+// scroll to part of the part of the page
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    });
+});
+
+// scroll to the top of the page
+$("a[href='#top']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+});

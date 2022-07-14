@@ -11,9 +11,11 @@ body {
     font-family: 'Lato';
     /* font-family: system, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; */
     background: #0f0f0f; /*121212*/
+    /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
     height: 100vh;
     width: 100%;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 
@@ -130,26 +132,17 @@ body {
     text-decoration: none;
     text-decoration-skip-ink: auto;
 }
-.projectsSect button {
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-}
-.projectsSect ul, ol {
+.projectsSect ul {
     padding: 0;
     margin: 0;
     list-style: none;
-}
-.projectsSect svg {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
 }
 .projectsSect img {
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
 }
+
 .project-container {
     max-width: 1000px;
     margin: 50px auto;
@@ -178,14 +171,10 @@ body {
         padding: 40px;
     }
 }
-.project-content .project-label {
-    color: #64ffda;
-    font-family: monospace;
-}
 .project-content .project-title {
-    font-size: 2rem;
+    font-size: 28px;
     margin: 10px 0 30px;
-    color: #eee;
+    color: #83f1d8; /*#eee*/
 }
 .project-content .project-details {
     font-size: 15px;
@@ -210,6 +199,18 @@ body {
     margin-right: 20px;
     color: #aaa;
     font-family: monospace;
+}
+.project-content .project-details ul li:first-child a::before {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-right: 8px;
+}
+.project-content .project-details ul li:last-child a::before {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: 13px;
+    margin-right: 8px;
 }
 .project-img {
     position: relative;
@@ -258,3 +259,75 @@ body {
         height: 100%;
     }
 }
+
+
+/* Project Cards Section */
+.ProjectsCardSect {
+    margin-top: 100px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.ProjectsCardSect > * {
+    flex-grow: 1;
+    flex-basis: calc((600px - 100%) * 999);
+    min-width: 280px;
+    max-width: 330px;
+}
+
+.projectCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    color: #000;
+    border-radius: 0.45em;
+    box-shadow: 3px 2px 14px rgb(38, 38, 49, 0.4);
+    overflow: hidden;
+}  
+@media (max-width: 715px) {
+    .projectCard {
+      max-height: 500px;
+      min-width: 260px;
+      flex-direction: row;
+    }
+}
+  
+.card-content {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.card-details {
+    color:#0007;
+    font-style: 0.1rem;
+    margin-bottom: 1em;
+}
+.card-prjLink {
+    position: relative;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    padding: 0.45em 1.05em;
+    border-radius: 0.45em;
+    background: linear-gradient(-32deg, #999fff, 50%, plum);
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0.5em 1.2em #0004;
+}
+.card-content a::before {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 18px;
+    margin-right: 8px;
+}
+  
