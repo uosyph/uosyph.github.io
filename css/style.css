@@ -9,9 +9,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Lato';
-    /* font-family: system, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; */
-    background: #0f0f0f; /*121212*/
-    /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
+    background: #121212;
     height: 100vh;
     width: 100%;
     user-select: none;
@@ -21,10 +19,10 @@ body {
 
 /* background particles */
 #particles-js, #parallax, .layer {
-    padding-top: 20px;
+    padding: 40px;
     /* z-index: -3; */
-    height: 3150px; /*100%*/
     position: absolute;
+    height: 100%;
     width: 100%;
 }
 #particles-js {
@@ -32,7 +30,8 @@ body {
 }
 @media (max-width:600px) {
     #particles-js, #parallax, .layer {
-        height: 100%;
+        /* overflow-x: hidden; */
+        padding: 20px;
     }
 }
 
@@ -45,9 +44,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
-/* Name */
 .name h1 {
     color: #fff;
     text-align: center;
@@ -56,7 +52,6 @@ body {
     font-weight: 300;
     letter-spacing: .2em;
 }
-
 
 /* glitch like effect */
 #glitch {
@@ -89,6 +84,7 @@ body {
     font-weight: 400;
     letter-spacing: .2em;
 }
+
 /* scroll down button */
 .about .down {
     text-align: center;
@@ -130,7 +126,7 @@ body {
 
 /* The projects show case section
 is done by the amazing Brittany Chiang on codepen
-and edited by me to fit the theme */
+and modified by me to fit the theme */
 /* Projects Section */
 .projectsSect {
     padding-top: 90px;
@@ -155,7 +151,7 @@ and edited by me to fit the theme */
     }
 }
 .projectsSect a {
-    display: inline-blesock;
+    display: inline-block;
     color: inherit;
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -202,16 +198,20 @@ and edited by me to fit the theme */
 .project-content .project-title {
     font-size: 28px;
     margin: 10px 0 30px;
-    color: #83f1d8; /*#eee*/
+    color: #e9f3f1; /*#eee*/
+    opacity: 95%;
 }
 .project-content .project-details {
     font-size: 15px;
     line-height: 1.5;
-    color: #aaa;
+    color: #eee;
+    opacity: 95%;
 }
 .project-content .project-details p {
-    background-color: #252525;
+    background-color: #181717;
     padding: 20px 25px;
+    border-radius: 3px;
+    opacity: 90%;
 }
 @media (max-width: 600px) {
     .project-content .project-details p {
@@ -228,13 +228,19 @@ and edited by me to fit the theme */
     color: #aaa;
     font-family: monospace;
 }
-.project-content .project-details ul li:first-child a::before {
+.project-content .project-details ul li > * {
+    transition: .3s all ease;
+}
+.project-content .project-details ul li > *:hover {
+    opacity: 60%;
+}
+.project-content .project-details ul li .sourceCode::before {
     content: "\f09b";
     font-family: FontAwesome;
     font-size: 15px;
     margin-right: 8px;
 }
-.project-content .project-details ul li:last-child a::before {
+.project-content .project-details ul li .viewProject::before {
     content: "\f08e";
     font-family: FontAwesome;
     font-size: 13px;
@@ -244,8 +250,8 @@ and edited by me to fit the theme */
     position: relative;
     z-index: -1;
     background-color: #64ffda;
-    background: linear-gradient(0.4turn, #64ffda, #64ff8d);
-    border-radius: 2px;
+    background: linear-gradient(0.45turn, #64ffda, #ff64e5);
+    border-radius: 5px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
 }
@@ -310,10 +316,10 @@ and edited by me to fit the theme */
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #fff;
-    color: #000;
+    background: #252525;
+    opacity: 90%;
     border-radius: 0.45em;
-    box-shadow: 3px 2px 14px rgb(38, 38, 49, 0.4);
+    box-shadow: 3px 2px 14px rgb(38, 38, 49, 0.2);
     overflow: hidden;
 }  
 @media (max-width: 715px) {
@@ -330,14 +336,16 @@ and edited by me to fit the theme */
     align-items: center;
     flex-direction: column;
 }
-
 .card-title {
+    color: #e9f3f1;
+    opacity: 80%;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 .card-details {
-    color:#0007;
+    color:#eee;
+    opacity: 80%;
     font-size: 15px;
     font-style: 0.1rem;
     margin-bottom: 1em;
@@ -348,16 +356,54 @@ and edited by me to fit the theme */
     text-decoration: none;
     padding: 0.45em 1.05em;
     border-radius: 0.45em;
-    background: linear-gradient(-32deg, #999fff, 50%, plum);
+    background: linear-gradient(0.45turn, #999fff, 50%, plum);
+    opacity: 80%;
     color: #fff;
     font-size: 1rem;
     box-shadow: 0 0.5em 1.2em #0004;
+    transition: .3s all ease;
+}
+.card-prjLink:hover {
+    opacity: 60%;
 }
 .card-content a::before {
     content: "\f09b";
     font-family: FontAwesome;
     font-size: 18px;
     margin-right: 8px;
+}
+
+
+/* Marks */
+.lang-JS {
+    color: #f1e05a
+}
+.lang-CSS {
+    color: #563d7c;
+}
+.algo {
+    color: #d461b7;
+}
+.lang-brainfk {
+    color: #9b7c9e;
+}
+.lang-brainfkOP {
+    color: #04e2ff;
+}
+.lang-java {
+    color: #b07219;
+}
+.lang-shell {
+    color: #89e051;
+}
+.lang-shellTer {
+    color: #999fff;
+}
+.lang-MarkDark {
+    color: #cf3e3e;
+}
+.lang-MarkLight {
+    color: #9e5d5d;
 }
 
 
@@ -412,6 +458,10 @@ and edited by me to fit the theme */
     border: #64ffda 1px solid;
     padding-inline: 18px;
     border-radius: 4px;
+    transition: .3s all ease;
+}
+.contact .email-cv a:hover {
+    background-color: #64ffdb42;
 }
 
 .contact .soical {
@@ -421,9 +471,20 @@ and edited by me to fit the theme */
     font-size: 20px;
     color: #fff;
     opacity: 60%;
+    transition: .3s all ease;
+}
+.contact .soical i:hover {
+    color: #64ffdba2;
+    opacity: 40%;
 }
 
 /* Footer */
+@media (max-width: 600px) {
+    footer {
+        margin-bottom: 20px;
+    }
+}
+
 footer .up {
     text-align: center;
     bottom: 140px;
@@ -467,6 +528,10 @@ footer .sig {
     text-align: center;
 	text-transform: uppercase;
     text-decoration: none;
+    transition: .6s all ease;
+}
+footer .sig:hover {
+    opacity: 90%;
 }
 footer .source a {
     letter-spacing: 2px;

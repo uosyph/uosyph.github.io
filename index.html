@@ -17,7 +17,6 @@
 </head>
 <body>
     <div id="parallax">
-        <!-- data-depth determines how fast parallax elements move -->
         <div class="layer" data-depth="0.2">
             <div id="particles-js"></div>
         </div>
@@ -59,12 +58,21 @@
               <h4 class="project-title">Sorting Algorithm Visualizer</h4>
 
               <div class="project-details">
-                <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food          truck hell of seitan skateboard literally hexagon fixie next level. 
-                Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.</p>
+                <p>
+                Sorting Algorithm Visualizer written in 
+                <span class="lang-JS">JavaScript</span> and styled in 
+                <span class="lang-CSS">CSS</span>. Containing &nbsp; " 
+                <span class="algo">Bubble</span> Sort, 
+                <span class="algo">Selection</span> Sort, 
+                <span class="algo">Insertion</span> Sort, 
+                <span class="algo">Quick</span> Sort, and 
+                <span class="algo">Merge</span> Sort. "
+                &nbsp; Built-in a way that allows for adding more algorithms, and it can be styled easily.
+                </p>
 
                 <ul>
-                <li><a href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source Code</a></li>
-                <li><a href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View Project</a></li>
+                <li><a class="sourceCode" href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source Code</a></li>
+                <li><a class="viewProject" href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View Project</a></li>
                 </ul>
               </div>
             </div>
@@ -76,17 +84,30 @@
       </div>
 
       <div class="project-container">
-        <div class="project" id="rightproj">
+        <div class="project">
             <div class="project-content">
-              <h4 class="project-title">TODO App</h4>
+              <h4 class="project-title">Brain Interpreter</h4>
 
               <div class="project-details">
-                <p>Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food          truck hell of seitan skateboard literally hexagon fixie next level. 
-                Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.</p>
+                <p> <span class="lang-brainfk">"Brainfk"</span> Interpreter written in <span class="lang-java">Java</span>. 
+                &nbsp; The user is given an array of <span class="lang-MarkDark">30,000 </span> 1byte memory blocks, 
+                and there are only 8 operators available to use, &nbsp; 
+                "<span class="lang-brainfkOP">></span>" &nbsp; "<span class="lang-brainfkOP"><</span>" &nbsp; 
+                to move the pointer inside the array, &nbsp; 
+                "<span class="lang-brainfkOP">+</span>" &nbsp; "<span class="lang-brainfkOP">-</span>" &nbsp; 
+                to increase or decrease the value at the pointer's location, &nbsp; 
+                "<span class="lang-brainfkOP">[</span>" &nbsp; starts a loop, &nbsp; 
+                "<span class="lang-brainfkOP">]</span>" &nbsp; ends loop if the block at the pointer's location is zero, &nbsp; 
+                "<span class="lang-brainfkOP">,</span>" &nbsp; input 1 character, 
+                &nbsp; "<span class="lang-brainfkOP">.</span>" &nbsp; print 1 character. &nbsp; 
+                Any character besides these operators is <span class="lang-MarkDark">ignored</span> 
+                by the interpreter and considered a comment.
+                </p>
 
                 <ul>
-                <li><a href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source Code</a></li>
-                <li><a href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View Project</a></li>
+                  <li><a class="sourceCode" href="https://github.com/yousafesaeed/brain-interpreter"
+                  target="_blank">Source Code</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -100,14 +121,21 @@
       <div class="project-container">
         <div class="project">
             <div class="project-content">
-              <h4 class="project-title">Brain Interpreter</h4>
+              <h4 class="project-title">Appointment Scheduling App</h4>
 
               <div class="project-details">
-                <p>"Brainfk" Interpreter written in Java. <br> The user is given an array of 30,000 1byte memory blocks, and there are only 8 operators available to use, ">" "<" to move the pointer inside the array, "+" "-" to increases or decreases the value at the pointer's location, "[" start a loop, "]" end loop if the block at the pointer's location is zero, "," input 1 charachter, "." print 1 characher.</p>
+                <p>
+                Appointment Scheduling App written in <span class="lang-shell">Bash</span>, the user can easily and quickly 
+                <span class="lang-MarkLight">add</span> appointments or 
+                <span class="lang-MarkLight">edit</span> already existing ones. 
+                Existing appointments can be <span class="lang-MarkLight">viewed</span> and filtered by 
+                <span class="lang-MarkLight">date</span>, 
+                and it's all in the <span class="lang-shellTer">Terminal</span>.
+                </p>
 
                 <ul>
-                <li><a href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source Code</a></li>
-                <li><a href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View Project</a></li>
+                  <li><a class="sourceCode" href="https://github.com/yousafesaeed/bash-scripts/blob/main/schedule.sh" target="_blank">Source Code</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -117,31 +145,34 @@
             </div>
         </div>
       </div>
+
     </section>
 
     <section class="ProjectsCardSect">
       <div class="projectCard">
-        <div class="card-img a"></div>
-
           <div class="card-content">
             <div class="card-title">Steam Avatar Grabber</div>
 
-            <div class="card-details"> A web scraper written in Java, which gets the profile avatar of any Steam account, by using the URL which is provided by the user.</div>
+            <div class="card-details">
+              <span class="lang-MarkDark">A web scraper</span> written in <span class="lang-java">Java</span>, 
+              which gets the profile avatar of any <span class="lang-MarkLight">Steam</span> account, by using the URL which is provided by the user.
+            </div>
             
-            <a href="https://github.com/yousafesaeed/" class="card-prjLink">Source Code</a>
+            <a href="https://github.com/yousafesaeed/steam-avatar-grabber" target="_blank" class="card-prjLink">Source Code</a>
           </div>
       </div>
 
       <div class="projectCard">
-        <div class="card-img a"></div>
-
           <div class="card-content">
             <div class="card-title">Sorting Visualizer in Java</div>
 
-            <div class="card-details">Sorting Alogrithm Visualizer written in Java Using Swing Components,
-            Swing Workers and Graphics 2D.</div>
+            <div class="card-details">
+              <span class="lang-MarkDark">Sorting Algorithm Visualizer</span> written in <span class="lang-java">Java</span> 
+              Using Swing Components,
+              Swing Workers and Graphics2D.
+            </div>
             
-            <a href="https://github.com/yousafesaeed/" class="card-prjLink">Source Code</a>
+            <a href="https://github.com/yousafesaeed/java-sorting-visualizer" target="_blank" class="card-prjLink">Source Code</a>
           </div>
       </div>
     </section>
@@ -153,8 +184,8 @@
           or how I can help your site out, please feel free to reach out!</p>
         
         <ul class="email-cv">  
-        <li><a href="" target="_blank">Email</a></li>
-        <li><a href="assets/Yousef-Saeed-Resume.pdf" target="_blank">Resume</a></li>
+        <li><a href="mailto: yousafesaeed@gmail.com" target="_blank">Email</a></li>
+        <li><a href="/Yousef-Saeed-Resume.pdf" target="_blank">Resume</a></li>
         </ul>
 
         <ul class="soical">
@@ -163,7 +194,7 @@
           </li>
 
           <li>
-            <a href="https://linkedin/in/yousafesaeed" target="_blank" class="linkedin">
+            <a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
               <i class="fa-brands fa-linkedin-in"></i></a>
           </li>
 
