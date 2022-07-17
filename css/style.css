@@ -30,7 +30,6 @@ body {
 }
 @media (max-width:600px) {
     #particles-js, #parallax, .layer {
-        /* overflow-x: hidden; */
         padding: 20px;
     }
 }
@@ -51,6 +50,11 @@ body {
     opacity: 90%;
     font-weight: 300;
     letter-spacing: .2em;
+}
+@media (max-width: 600px) {
+    .aboutSect {
+        margin-top: 60px;
+    }
 }
 
 /* glitch like effect */
@@ -481,7 +485,7 @@ and modified by me to fit the theme */
 /* Footer */
 @media (max-width: 600px) {
     footer {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 }
 
