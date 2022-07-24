@@ -4,13 +4,13 @@
 </a>
 </div>
 
-<br>
-
 <h1 align="center">
 <a href="https://yousafesaeed.github.io">
 yousafesaeed.github.io
 </a>
 </h1>
+
+<br>
 
 <p align="center">
 The First Iteration of my personal website.
@@ -36,5 +36,4 @@ Note : almost all elements don't have 100% opacity, so colors may appear a bit d
 
 ---
 
-<br>
 Feel free to fork or copy and reuse anything in this repository.
