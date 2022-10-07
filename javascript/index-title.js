@@ -55,7 +55,7 @@ randomChar() {
 
 
 const phrases = [
-    'Software Developer'
+    'Full-Stack Developer'
     // 'What are you looking for?',
     // 'There is nothing to see here'
 ]
