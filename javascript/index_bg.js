@@ -230,11 +230,10 @@ var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
       },
       "retina_detect": true
     });
-
 }
 
 
-// scroll to part of the part of the page
+// scroll to a part of the page
 $(function() {
   $('a[href*=#]').on('click', function(e) {
     e.preventDefault();
