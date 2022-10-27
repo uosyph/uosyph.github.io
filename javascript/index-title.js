@@ -1,83 +1,80 @@
-
 class TextScramble {
-constructor(el) {
-    this.el = el
-    this.chars = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/' // '!<>-_\\/[]{}—=+*^?#________'
-    this.update = this.update.bind(this)
-}
-setText(newText) {
-    const oldText = this.el.innerText
-    const length = Math.max(oldText.length, newText.length)
-    const promise = new Promise((resolve) => this.resolve = resolve)
-    this.queue = []
-    for (let i = 0; i < length; i++) {
-    const from = oldText[i] || ''
-    const to = newText[i] || ''
-    const start = Math.floor(Math.random() * 40)
-    const end = start + Math.floor(Math.random() * 40)
-    this.queue.push({ from, to, start, end })
+    constructor(el) {
+        this.el = el
+        this.chars = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/' // '!<>-_\\/[]{}—=+*^?#________'
+        this.update = this.update.bind(this)
     }
-    cancelAnimationFrame(this.frameRequest)
-    this.frame = 0
-    this.update()
-    return promise
-}
-update() {
-    let output = ''
-    let complete = 0
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-    let { from, to, start, end, char } = this.queue[i]
-    if (this.frame >= end) {
-        complete++
-        output += to
-    } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-        char = this.randomChar()
-        this.queue[i].char = char
+    setText(newText) {
+        const oldText = this.el.innerText
+        const length = Math.max(oldText.length, newText.length)
+        const promise = new Promise((resolve) => this.resolve = resolve)
+        this.queue = []
+        for (let i = 0; i < length; i++) {
+        const from = oldText[i] || ''
+        const to = newText[i] || ''
+        const start = Math.floor(Math.random() * 40)
+        const end = start + Math.floor(Math.random() * 40)
+        this.queue.push({ from, to, start, end })
         }
-        output += `<span class="dud">${char}</span>`
-    } else {
-        output += from
+        cancelAnimationFrame(this.frameRequest)
+        this.frame = 0
+        this.update()
+        return promise
     }
+    update() {
+        let output = ''
+        let complete = 0
+        for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i]
+        if (this.frame >= end) {
+            complete++
+            output += to
+        } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+            char = this.randomChar()
+            this.queue[i].char = char
+            }
+            output += `<span class="dud">${char}</span>`
+        } else {
+            output += from
+        }
+        }
+        this.el.innerHTML = output
+        if (complete === this.queue.length) {
+        this.resolve()
+        } else {
+        this.frameRequest = requestAnimationFrame(this.update)
+        this.frame++
+        }
     }
-    this.el.innerHTML = output
-    if (complete === this.queue.length) {
-    this.resolve()
-    } else {
-    this.frameRequest = requestAnimationFrame(this.update)
-    this.frame++
+    randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
     }
-}
-randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)]
-    }
-}
 
 
-const phrases = [
-    'Full-Stack Developer'
-    // 'What are you looking for?',
-    // 'There is nothing to see here'
-]
+    const phrases = [
+        'Full-Stack Developer'
+        // 'What are you looking for?',
+        // 'There is nothing to see here'
+    ]
 
-const el = document.querySelector('.text')
-const fx = new TextScramble(el)
+    const el = document.querySelector('.text')
+    const fx = new TextScramble(el)
 
+    let counter = 0
+    const next = () => {
+        // generating number in (x-y range) to reapet the animation
+        function generateRandomIntegerInRange(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let rndmNum = generateRandomIntegerInRange(8000, 16000);
 
-let counter = 0
-const next = () => {
-
-    // generating number in (x-y range) to reapet the animation
-    function generateRandomIntegerInRange(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    let rndmNum = generateRandomIntegerInRange(8000, 16000);
-
-    fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, rndmNum)     // frequency
-    })
-counter = (counter + 1) % phrases.length
-
+        fx.setText(phrases[counter]).then(() => {
+            // frequency
+            setTimeout(next, rndmNum)
+        })
+    counter = (counter + 1) % phrases.length
 }
 
 next()
