@@ -1,212 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousef Saeed</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-    <link rel="stylesheet" href="style/css/index/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/6.5.0/css/font-awesome.min.css">
-    <script src="javascript/index/bg.js" defer></script>
-    <script type="module" src="javascript/index/title.js" defer></script>
-    <script src="https://kit.fontawesome.com/5225150f52.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/splitting/dist/splitting.js"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yousef Saeed</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style/css/index/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/6.5.0/css/font-awesome.min.css">
+  <script src="javascript/index/bg.js" defer></script>
+  <script type="module" src="javascript/index/title.js" defer></script>
+  <script src="https://kit.fontawesome.com/5225150f52.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.js"></script>
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 <body>
-    <div id="parallax">
-        <div class="layer" data-depth="0.2">
-            <div id="particles-js"></div>
-        </div>
+  <div id="parallax">
+    <div class="layer" data-depth="0.2">
+      <div id="particles-js"></div>
+    </div>
+  </div>
+
+  <section class="aboutSect">
+    <div class="name">
+      <h1>YOUSEF SAEED</h1>
     </div>
 
-    <section class="aboutSect">
-        <div class="name">
-            <h1>YOUSEF SAEED</h1>
-        </div>
+    <div id="glitch">>&nbsp;
+      <div class="text"></div>&nbsp;.
+    </div>
 
-        <div id="glitch">>&nbsp;
-          <div class="text"></div>&nbsp;.
-       </div>
+    <div class="about">
+      <p>
+        A third-year Management Information Systems student,<br>and a Full-Stack Developer based in Egypt.<br><br><br>
+      </p>
 
-       <div class="about">
-            <p>
-            A third-year Management Information Systems student,<br>and a Full-Stack Developer based in Egypt.<br><br><br>
-            </p>
-
-            <div class="contact">
-              <ul class="soical">
-                <li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
-                  <i class="fa-brands fa-github"></i></a>
-                </li>
-      
-                <li>
-                  <a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
-                    <i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-      
-                <li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
-                  <i class="fa-brands fa-twitter"></i></a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="down">
-                <a href="#projects">
-                    Check Out Some of my Projects
-                    <span></span>
-                </a>
-            </div>
-       </div>
-    </section>
-
-    <section class="projectsSect" id="projects">
-
-      <h3>Selected Projects</h3>
-        
-      <div class="project-container">
-        <div class="project">
-            <div class="project-content">
-              <h4 class="project-title">Sorting Algorithm Visualizer</h4>
-
-              <div class="project-details">
-                <p>
-                Sorting Algorithm Visualizer written in 
-                <span class="lang-JS">JavaScript</span> and styled in 
-                <span class="lang-CSS">CSS</span>. Containing &nbsp; " 
-                <span class="algo">Bubble</span> Sort, 
-                <span class="algo">Selection</span> Sort, 
-                <span class="algo">Insertion</span> Sort, 
-                <span class="algo">Quick</span> Sort, and 
-                <span class="algo">Merge</span> Sort. "
-                &nbsp; Built-in a way that allows for adding more algorithms, and it can be styled easily.
-                </p>
-
-                <ul>
-                <li><a class="sourceCode" href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source Code</a></li>
-                <li><a class="viewProject" href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View Project</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project-img">
-            <img src="assets/demo/visDemo.gif"/>
-            </div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="project">
-            <div class="project-content">
-              <h4 class="project-title">Brain Interpreter</h4>
-
-              <div class="project-details">
-                <p> <span class="lang-brainfk">"Brainfk"</span> Interpreter written in <span class="lang-java">Java</span>. 
-                &nbsp; The user is given an array of <span class="lang-MarkDark">30,000 </span> 1byte memory blocks, 
-                and there are only 8 operators available to use, &nbsp; 
-                "<span class="lang-brainfkOP">></span>" &nbsp; "<span class="lang-brainfkOP"><</span>" &nbsp; 
-                to move the pointer inside the array, &nbsp; 
-                "<span class="lang-brainfkOP">+</span>" &nbsp; "<span class="lang-brainfkOP">-</span>" &nbsp; 
-                to increase or decrease the value at the pointer's location, &nbsp; 
-                "<span class="lang-brainfkOP">[</span>" &nbsp; starts a loop, &nbsp; 
-                "<span class="lang-brainfkOP">]</span>" &nbsp; ends loop if the block at the pointer's location is zero, &nbsp; 
-                "<span class="lang-brainfkOP">,</span>" &nbsp; input 1 character, 
-                &nbsp; "<span class="lang-brainfkOP">.</span>" &nbsp; print 1 character. &nbsp; 
-                Any character besides these operators is <span class="lang-MarkDark">ignored</span> 
-                by the interpreter and considered a comment.
-                </p>
-
-                <ul>
-                  <li><a class="sourceCode" href="https://github.com/yousafesaeed/brain-interpreter"
-                  target="_blank">Source Code</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project-img">
-            <img src="assets/demo/brainDemo.gif"/>
-            </div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="project">
-            <div class="project-content">
-              <h4 class="project-title">Appointment Scheduling App</h4>
-
-              <div class="project-details">
-                <p>
-                Appointment Scheduling App written in <span class="lang-shell">Bash</span>, the user can easily and quickly 
-                <span class="lang-MarkLight">add</span> appointments or 
-                <span class="lang-MarkLight">edit</span> already existing ones. 
-                Existing appointments can be <span class="lang-MarkLight">viewed</span> and filtered by 
-                <span class="lang-MarkLight">date</span>, 
-                and it's all in the <span class="lang-shellTer">Terminal</span>.
-                </p>
-
-                <ul>
-                  <li><a class="sourceCode" href="https://github.com/yousafesaeed/bash-scripts/blob/main/schedule.sh" target="_blank">Source Code</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="project-img">
-            <img src="assets/demo/todoDemo.gif"/>
-            </div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="ProjectsCardSect">
-      <div class="projectCard">
-          <div class="card-content">
-            <div class="card-title">Steam Avatar Grabber</div>
-
-            <div class="card-details">
-              <span class="lang-MarkDark">A web scraper</span> written in <span class="lang-java">Java</span>, 
-              which gets the profile avatar of any <span class="lang-MarkLight">Steam</span> account, by using the URL which is provided by the user.
-            </div>
-            
-            <a href="https://github.com/yousafesaeed/steam-avatar-grabber" target="_blank" class="card-prjLink">Source Code</a>
-          </div>
-      </div>
-
-      <div class="projectCard">
-          <div class="card-content">
-            <div class="card-title">Sorting Visualizer in Java</div>
-
-            <div class="card-details">
-              <span class="lang-MarkDark">Sorting Algorithm Visualizer</span> written in <span class="lang-java">Java</span> 
-              Using Swing Components,
-              Swing Workers and Graphics2D.
-            </div>
-            
-            <a href="https://github.com/yousafesaeed/java-sorting-visualizer" target="_blank" class="card-prjLink">Source Code</a>
-          </div>
-      </div>
-    </section>
-
-    <section class="contactSect">
       <div class="contact">
-        <h4>Get In Touch</h4>
-        <p>
-          If you have a question on your mind or if you need some help, <br> feel free to reach out to me!
-        </p>
-        
-        <ul class="email-cv">  
-        <li><a href="mailto: yousafesaeed@gmail.com" target="_blank">Email</a></li>
-        <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
-        </ul>
-
         <ul class="soical">
           <li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
-            <i class="fa-brands fa-github"></i></a>
+              <i class="fa-brands fa-github"></i></a>
           </li>
 
           <li>
@@ -215,24 +49,199 @@
           </li>
 
           <li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
-            <i class="fa-brands fa-twitter"></i></a>
+              <i class="fa-brands fa-twitter"></i></a>
           </li>
         </ul>
       </div>
-    </section>
 
-    <footer>
-      <div class="up">
-        <a href="#top">
-            <span></span>
+      <div class="down">
+        <a href="#projects">
+          Check Out Some of my Projects
+          <span></span>
         </a>
       </div>
+    </div>
+  </section>
 
-      <div class="sig">Designed & Built by Yousef Saeed
-        <div class="source">
-          <a href="https://github.com/yousafesaeed/yousafesaeed.github.io" target="_blank">Source Code on GitHub</a>
+  <section class="projectsSect" id="projects">
+
+    <h3>Selected Projects</h3>
+
+    <div class="project-container">
+      <div class="project">
+        <div class="project-content">
+          <h4 class="project-title">Sorting Algorithm Visualizer</h4>
+
+          <div class="project-details">
+            <p>
+              Sorting Algorithm Visualizer written in
+              <span class="lang-JS">JavaScript</span> and styled in
+              <span class="lang-CSS">CSS</span>. Containing &nbsp; "
+              <span class="algo">Bubble</span> Sort,
+              <span class="algo">Selection</span> Sort,
+              <span class="algo">Insertion</span> Sort,
+              <span class="algo">Quick</span> Sort, and
+              <span class="algo">Merge</span> Sort. "
+              &nbsp; Built-in a way that allows for adding more algorithms, and it can be styled easily.
+            </p>
+
+            <ul>
+              <li><a class="sourceCode" href="https://github.com/yousafesaeed/sorting-visualizer" target="_blank">Source
+                  Code</a></li>
+              <li><a class="viewProject" href="https://yousafesaeed.github.io/sorting-visualizer" target="_blank">View
+                  Project</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-img">
+          <img src="assets/demo/visDemo.gif" />
         </div>
       </div>
-    </footer>
+    </div>
+
+    <div class="project-container">
+      <div class="project">
+        <div class="project-content">
+          <h4 class="project-title">Brain Interpreter</h4>
+
+          <div class="project-details">
+            <p> <span class="lang-brainfk">"Brainfk"</span> Interpreter written in <span class="lang-java">Java</span>.
+              &nbsp; The user is given an array of <span class="lang-MarkDark">30,000 </span> 1byte memory blocks,
+              and there are only 8 operators available to use, &nbsp;
+              "<span class="lang-brainfkOP">></span>" &nbsp; "<span class="lang-brainfkOP">
+                << /span>" &nbsp;
+                  to move the pointer inside the array, &nbsp;
+                  "<span class="lang-brainfkOP">+</span>" &nbsp; "<span class="lang-brainfkOP">-</span>" &nbsp;
+                  to increase or decrease the value at the pointer's location, &nbsp;
+                  "<span class="lang-brainfkOP">[</span>" &nbsp; starts a loop, &nbsp;
+                  "<span class="lang-brainfkOP">]</span>" &nbsp; ends loop if the block at the pointer's location is
+                  zero, &nbsp;
+                  "<span class="lang-brainfkOP">,</span>" &nbsp; input 1 character,
+                  &nbsp; "<span class="lang-brainfkOP">.</span>" &nbsp; print 1 character. &nbsp;
+                  Any character besides these operators is <span class="lang-MarkDark">ignored</span>
+                  by the interpreter and considered a comment.
+            </p>
+
+            <ul>
+              <li><a class="sourceCode" href="https://github.com/yousafesaeed/brain-interpreter" target="_blank">Source
+                  Code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-img">
+          <img src="assets/demo/brainDemo.gif" />
+        </div>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="project">
+        <div class="project-content">
+          <h4 class="project-title">Appointment Scheduling App</h4>
+
+          <div class="project-details">
+            <p>
+              Appointment Scheduling App written in <span class="lang-shell">Bash</span>, the user can easily and
+              quickly
+              <span class="lang-MarkLight">add</span> appointments or
+              <span class="lang-MarkLight">edit</span> already existing ones.
+              Existing appointments can be <span class="lang-MarkLight">viewed</span> and filtered by
+              <span class="lang-MarkLight">date</span>,
+              and it's all in the <span class="lang-shellTer">Terminal</span>.
+            </p>
+
+            <ul>
+              <li><a class="sourceCode" href="https://github.com/yousafesaeed/bash-scripts/blob/main/schedule.sh"
+                  target="_blank">Source Code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-img">
+          <img src="assets/demo/todoDemo.gif" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="ProjectsCardSect">
+    <div class="projectCard">
+      <div class="card-content">
+        <div class="card-title">Steam Avatar Grabber</div>
+
+        <div class="card-details">
+          <span class="lang-MarkDark">A web scraper</span> written in <span class="lang-java">Java</span>,
+          which gets the profile avatar of any <span class="lang-MarkLight">Steam</span> account, by using the URL which
+          is provided by the user.
+        </div>
+
+        <a href="https://github.com/yousafesaeed/steam-avatar-grabber" target="_blank" class="card-prjLink">Source
+          Code</a>
+      </div>
+    </div>
+
+    <div class="projectCard">
+      <div class="card-content">
+        <div class="card-title">Sorting Visualizer in Java</div>
+
+        <div class="card-details">
+          <span class="lang-MarkDark">Sorting Algorithm Visualizer</span> written in <span class="lang-java">Java</span>
+          Using Swing Components,
+          Swing Workers and Graphics2D.
+        </div>
+
+        <a href="https://github.com/yousafesaeed/java-sorting-visualizer" target="_blank" class="card-prjLink">Source
+          Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contactSect">
+    <div class="contact">
+      <h4>Get In Touch</h4>
+      <p>
+        If you have a question on your mind or if you need some help, <br> feel free to reach out to me!
+      </p>
+
+      <ul class="email-cv">
+        <li><a href="mailto: yousafesaeed@gmail.com" target="_blank">Email</a></li>
+        <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+
+      <ul class="soical">
+        <li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
+            <i class="fa-brands fa-github"></i></a>
+        </li>
+
+        <li>
+          <a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
+            <i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+
+        <li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
+            <i class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="up">
+      <a href="#top">
+        <span></span>
+      </a>
+    </div>
+
+    <div class="sig">Designed & Built by Yousef Saeed
+      <div class="source">
+        <a href="https://github.com/yousafesaeed/yousafesaeed.github.io" target="_blank">Source Code on GitHub</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

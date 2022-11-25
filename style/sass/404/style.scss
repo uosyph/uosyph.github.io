@@ -6,6 +6,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	overflow: hidden;
 	font-family: $font-family_main;
@@ -14,6 +15,7 @@ body {
 	width: 100%;
 	user-select: none;
 }
+
 #particles-js {
 	padding: 10px;
 	position: absolute;
@@ -21,18 +23,21 @@ body {
 	width: 100%;
 	opacity: .6;
 }
+
 #parallax {
 	padding: 10px;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 }
+
 .layer {
 	padding: 10px;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 }
+
 .container {
 	display: inline-block;
 	width: 100%;
@@ -40,6 +45,7 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
 .notFound {
 	color: $color_white_1;
 	text-align: center;
@@ -48,6 +54,7 @@ body {
 	font-weight: 300;
 	letter-spacing: .25em;
 }
+
 #glitch {
 	width: 100vw;
 	justify-content: center;
@@ -60,6 +67,7 @@ body {
 	font-weight: 100;
 	letter-spacing: 0.25em;
 	color: $color_white_2;
+
 	>.text {
 		>.dud {
 			color: $color_dark_pink;
@@ -67,11 +75,13 @@ body {
 		}
 	}
 }
+
 .home {
 	margin-top: 150px;
 	text-align: center;
 	opacity: 90%;
 	cursor: pointer;
+
 	a {
 		text-decoration: none;
 		color: $color_white_1;
@@ -82,6 +92,7 @@ body {
 		background-color: $background-color_dark_cyan;
 		box-shadow: 0 2px 25px rgba(28, 226, 226, 0.5);
 		transition: all ease .4s;
+
 		&:hover {
 			background-color: $background-color_pink;
 			box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
@@ -89,16 +100,19 @@ body {
 		}
 	}
 }
+
 @media (max-width: 600px) {
 	.notFound {
 		font-size: 70px;
 	}
+
 	#glitch {
 		font-size: 15px;
 		font-weight: 300;
 		opacity: 50%;
 		letter-spacing: .15em;
 	}
+
 	.home {
 		a {
 			font-size: 13px;
