@@ -1,4 +1,10 @@
-@import "../utils/variables.scss";
+$color_1: #fff;
+$color_2: #FAFAFA;
+$color_3: #FF0082;
+$font-family_1: "Lato";
+$background-color_1: rgba(28, 226, 226, 0.5019607843);
+$background-color_2: rgba(255, 0, 130, 0.5019607843);
+
 @import "https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic";
 
 * {
@@ -9,7 +15,7 @@
 
 body {
 	overflow: hidden;
-	font-family: $font-family_main;
+	font-family: $font-family_1;
 	background: #121212;
 	height: 100vh;
 	width: 100%;
@@ -21,7 +27,7 @@ body {
 	position: absolute;
 	height: 70%;
 	width: 100%;
-	opacity: .6;
+	opacity: 0.6;
 }
 
 #parallax {
@@ -47,12 +53,12 @@ body {
 }
 
 .notFound {
-	color: $color_white_1;
+	color: $color_1;
 	text-align: center;
 	font-size: 90px;
 	opacity: 80%;
 	font-weight: 300;
-	letter-spacing: .25em;
+	letter-spacing: 0.25em;
 }
 
 #glitch {
@@ -66,11 +72,11 @@ body {
 	font-size: 22px;
 	font-weight: 100;
 	letter-spacing: 0.25em;
-	color: $color_white_2;
+	color: $color_2;
 
 	>.text {
 		>.dud {
-			color: $color_dark_pink;
+			color: $color_3;
 			opacity: 70%;
 		}
 	}
@@ -84,17 +90,17 @@ body {
 
 	a {
 		text-decoration: none;
-		color: $color_white_1;
+		color: $color_1;
 		font-size: 16px;
 		padding: 11px 21px;
 		letter-spacing: 0.3em;
 		border-radius: 4px;
-		background-color: $background-color_dark_cyan;
+		background-color: $background-color_1;
 		box-shadow: 0 2px 25px rgba(28, 226, 226, 0.5);
-		transition: all ease .4s;
+		transition: all ease 0.4s;
 
 		&:hover {
-			background-color: $background-color_pink;
+			background-color: $background-color_2;
 			box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 			opacity: 90%;
 		}
@@ -110,7 +116,7 @@ body {
 		font-size: 15px;
 		font-weight: 300;
 		opacity: 50%;
-		letter-spacing: .15em;
+		letter-spacing: 0.15em;
 	}
 
 	.home {
