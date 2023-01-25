@@ -84,6 +84,16 @@ body {
 		opacity: 90%;
 		font-weight: 300;
 		letter-spacing: 0.2em;
+
+		span {
+			font-family: sans-serif;
+			color: #fff;
+			text-align: center;
+			font-size: 62px;
+			opacity: 90%;
+			font-weight: 300;
+			letter-spacing: 0.2em;
+		}
 	}
 }
 
@@ -714,6 +724,13 @@ footer {
 				transform: skew(3deg);
 			}
 		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {
+	.blog-card {
+		max-width: 90%;
 	}
 }
 

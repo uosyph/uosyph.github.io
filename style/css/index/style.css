@@ -61,6 +61,15 @@ body {
   font-weight: 300;
   letter-spacing: 0.2em;
 }
+.name h1 span {
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 62px;
+  opacity: 90%;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
 
 #glitch {
   width: 100vw;
@@ -580,7 +589,7 @@ footer .source a {
     margin-bottom: 50px;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 881px) {
   .blog-card {
     flex-direction: row;
     max-width: 700px;
@@ -599,6 +608,11 @@ footer .source a {
     left: inherit;
     right: -10px;
     transform: skew(3deg);
+  }
+}
+@media screen and (max-width: 880px) {
+  .blog-card {
+    max-width: 90%;
   }
 }
 @media screen and (max-width: 64rem) {
