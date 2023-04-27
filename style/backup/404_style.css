@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic";
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
 
 * {
   margin: 0;
@@ -8,34 +8,27 @@
 
 body {
   overflow: hidden;
-  font-family: "Lato";
+  font-family: 'Lato';
   background: #121212;
   height: 100vh;
   width: 100%;
   user-select: none;
 }
 
-#particles-js {
-  padding: 10px;
-  position: absolute;
-  height: 70%;
-  width: 100%;
-  opacity: 0.6;
-}
-
-#parallax {
-  padding: 10px;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
+/* background particles */
+#particles-js,
+#parallax,
 .layer {
   padding: 10px;
   position: absolute;
   height: 100%;
   width: 100%;
 }
+
+#particles-js {
+  opacity: .6;
+}
+
 
 .container {
   display: inline-block;
@@ -45,15 +38,17 @@ body {
   align-items: center;
 }
 
+/* 404 */
 .notFound {
   color: #fff;
   text-align: center;
   font-size: 90px;
   opacity: 80%;
   font-weight: 300;
-  letter-spacing: 0.25em;
+  letter-spacing: .25em;
 }
 
+/* Where are you? */
 #glitch {
   width: 100vw;
   justify-content: center;
@@ -69,10 +64,11 @@ body {
 }
 
 #glitch > .text > .dud {
-  color: #FF0082;
+  color: rgb(255, 0, 130);
   opacity: 70%;
 }
 
+/* Let's go Home */
 .home {
   margin-top: 150px;
   text-align: center;
@@ -87,17 +83,19 @@ body {
   padding: 11px 21px;
   letter-spacing: 0.3em;
   border-radius: 4px;
-  background-color: rgba(28, 226, 226, 0.5019607843);
+  background-color: rgba(28, 226, 226, 0.5);
   box-shadow: 0 2px 25px rgba(28, 226, 226, 0.5);
-  transition: all ease 0.4s;
+  transition: all ease .4s;
 }
 
 .home a:hover {
-  background-color: rgba(255, 0, 130, 0.5019607843);
+  background-color: rgba(255, 0, 130, 0.5);
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
   opacity: 90%;
 }
 
+
+/* small screen optimization */
 @media (max-width: 600px) {
   .notFound {
     font-size: 70px;
@@ -107,7 +105,7 @@ body {
     font-size: 15px;
     font-weight: 300;
     opacity: 50%;
-    letter-spacing: 0.15em;
+    letter-spacing: .15em;
   }
 
   .home a {

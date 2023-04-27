@@ -6,7 +6,6 @@
 	<title>Yousef Saeed</title>
 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	<link rel="stylesheet" href="style/css/index/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/6.5.0/css/font-awesome.min.css">
 	<script src="javascript/index/bg.js" defer></script>
 	<script src="javascript/index/scroll.js" defer></script>
 	<script type="module" src="javascript/index/title.js" defer></script>
@@ -14,8 +13,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-	<script src="https://unpkg.com/splitting/dist/splitting.js"></script>
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 <body>
 	<div id="parallax">
@@ -34,197 +31,12 @@
 		</div>
 
 		<div class="about">
-			<p>
-				A third-year Management Information Systems student,<br>and a Full-Stack Developer based in
-				Egypt.<br><br><br>
-			</p>
-
-			<div class="contact">
-				<ul class="soical">
-					<li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
-							<i class="fa-brands fa-github"></i></a>
-					</li>
-
-					<li>
-						<a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
-							<i class="fa-brands fa-linkedin-in"></i></a>
-					</li>
-
-					<li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
-							<i class="fa-brands fa-twitter"></i></a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="down">
-				<a href="#projects">
-					Check Out Some of My Work
-					<span></span>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="projectsSect" id="projects">
-		<h3>Selected Projects</h3>
-
-
-		<div class="selPrjs">
-			<div class="blog-card alt">
-				<div class="description">
-					<p class="title">Sorting Algorithm Visualizer</p>
-					<p class="desc">
-						A website that visualizes the process of different Sorting Algorithms; containing: "Bubble Sort,
-						Selection Sort, Insertion Sort, Quick Sort, and Merge Sort.".
-					</p>
-					<p class="techs">
-						JavaScript <span class="keyword">·</span> HTML <span class="keyword">·</span> CSS
-					</p>
-					<p class="read-more">
-						<a class="sourceCode" target="_blank"
-							href="https://github.com/yousafesaeed/sorting-visualizer"></a>
-						<a class="viewProject" target="_blank"
-							href="https://yousafesaeed.github.io/sorting-visualizer"></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="blog-card">
-				<div class="description">
-					<p class="title">E-Commerce API</p>
-					<p class="desc">
-						A RESTful API connected to a database for a marketplace that lets users signup/login/delete
-						account, view/create/delete products, and make/cancel orders. Products can be filtered by
-						category or most popular. Passwords are hashed before being stored in the database, and users
-						get authorized before doing a CRUD operation.
-					</p>
-					<p class="techs">
-						TypeScript <span class="keyword">·</span> Node.js <span class="keyword">·</span> PostgreSQL
-						<span class="keyword">·</span> Express.js <span class="keyword">·</span> Jasmine <span
-							class="keyword">·</span> JWT
-					</p>
-					<p class="read-more">
-						<a class="sourceCode" target="_blank" href="https://github.com/yousafesaeed/ecommerce-api"></a>
-					</p>
-				</div>
-			</div>
-
-
-			<div class="blog-card alt">
-				<div class="description">
-					<p class="title">Chat Messaging Web App</p>
-					<p class="desc">
-						A web application that enables group chat between users on several channels.
-						Users can sign up for an account, log in, create channels, chat in channels, invite users to
-						channels, and accept or reject other users' invitations to channels.
-					</p>
-					<p class="techs">
-						Django <span class="keyword">·</span> Python <span class="keyword">·</span> SQLite <span
-							class="keyword">·</span> JavaScript <span class="keyword">·</span> HTML <span
-							class="keyword">·</span> Sass
-					</p>
-					<p class="read-more">
-						<a class="sourceCode" target="_blank" href="https://github.com/yousafesaeed/chat-app"></a>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<h4>Other Noteworthy Projects</h4>
-
-		<div class="wrapper">
-			<div class="cols">
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-					<div class="container">
-						<div class="front">
-							<div class="inner">
-								<p class="prj_title">Image Processing API</p>
-								<span class="prj_techs">
-									TypeScript <span class="keyword">·</span> Node.js <span class="keyword">·</span>
-									Express.js <span class="keyword">·</span> Jasmine <span class="keyword">·</span>
-									Sharp
-								</span>
-							</div>
-						</div>
-
-						<div class="back" ontouchstart="this.classList.toggle('hover');">
-							<div class="inner">
-								<p class="prj_desc">
-									API that can be used to scale and resize images via URL parameters.
-								</p>
-								<div class="links">
-									<a class="sourceCode" target="_blank"
-										href="https://github.com/yousafesaeed/image-processing-api"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-					<div class="container">
-						<div class="front">
-							<div class="inner">
-								<p class="prj_title">AWS Deployment Process</p>
-								<span class="prj_techs">
-									Node.js <span class="keyword">·</span> AWS <span class="keyword">·</span> CircleCI
-								</span>
-							</div>
-						</div>
-
-						<div class="back" ontouchstart="this.classList.toggle('hover');">
-							<div class="inner">
-								<p class="prj_desc">
-									Deploying a full-stack application to AWS using Elastic Beanstalk for the backend,
-									S3 for the frontend, RDS for The database and CircleCI for CI/CD.
-								</p>
-								<div class="links">
-									<a class="sourceCode" target="_blank"
-										href="https://github.com/yousafesaeed/deployment-process"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-					<div class="container">
-						<div class="front">
-							<div class="inner">
-								<p class="prj_title">E-mailing Service</p>
-								<span class="prj_techs">
-									Django <span class="keyword">·</span> Python <span class="keyword">·</span> SQLite
-									<span class="keyword">·</span> JavaScript <span class="keyword">·</span> JSON <span
-										class="keyword">·</span> HTML <span class="keyword">·</span> CSS
-								</span>
-							</div>
-						</div>
-
-						<div class="back" ontouchstart="this.classList.toggle('hover');">
-							<div class="inner">
-								<p class="prj_desc">
-									E-mailing Service where users can send emails, get emails, and reply to emails. The
-									BE and FE communicate through API made with Django and JavaScript.
-								</p>
-								<div class="links">
-									<a class="sourceCode" target="_blank"
-										href="https://github.com/yousafesaeed/CS50/tree/main/CS50W/mail/"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<p>Soon.</p>
 		</div>
 	</section>
 
 	<section class="contactSect">
 		<div class="contact">
-			<h4>Get In Touch</h4>
-			<p>
-				If you have a question on your mind or if you need some help, <br> feel free to reach out to me!
-			</p>
-
 			<ul class="email-cv">
 				<li><a href="mailto: yousafesaeed@gmail.com" target="_blank">Email</a></li>
 				<li><a href="/Resume.pdf" target="_blank">Resume</a></li>
@@ -234,12 +46,10 @@
 				<li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
 						<i class="fa-brands fa-github"></i></a>
 				</li>
-
 				<li>
 					<a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
 						<i class="fa-brands fa-linkedin-in"></i></a>
 				</li>
-
 				<li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
 						<i class="fa-brands fa-twitter"></i></a>
 				</li>
@@ -248,12 +58,6 @@
 	</section>
 
 	<footer>
-		<div class="up">
-			<a href="#top">
-				<span></span>
-			</a>
-		</div>
-
 		<div class="sig">Designed & Built by Yousef Saeed
 			<div class="source">
 				<a href="https://github.com/yousafesaeed/yousafesaeed.github.io" target="_blank">
