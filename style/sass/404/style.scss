@@ -1,0 +1,127 @@
+$color_1: #fff;
+$color_2: #FAFAFA;
+$color_3: #FF0082;
+$font-family_1: "Lato";
+$background-color_1: rgba(28, 226, 226, 0.5019607843);
+$background-color_2: rgba(255, 0, 130, 0.5019607843);
+
+@import "https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+	font-family: $font-family_1;
+	background: #121212;
+	height: 100dvh;
+	width: 100%;
+	user-select: none;
+}
+
+#particles-js {
+	padding: 10px;
+	position: absolute;
+	height: 70%;
+	width: 100%;
+	opacity: 0.6;
+}
+
+#parallax {
+	padding: 10px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.layer {
+	padding: 10px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	display: inline-block;
+	width: 100%;
+	margin-top: 120px;
+	justify-content: center;
+	align-items: center;
+}
+
+.notFound {
+	color: $color_1;
+	text-align: center;
+	font-size: 90px;
+	opacity: 80%;
+	font-weight: 300;
+	letter-spacing: 0.25em;
+}
+
+#glitch {
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-top: 40px;
+	position: absolute;
+	opacity: 70% !important;
+	font-size: 22px;
+	font-weight: 100;
+	letter-spacing: 0.25em;
+	color: $color_2;
+
+	>.text {
+		>.dud {
+			color: $color_3;
+			opacity: 70%;
+		}
+	}
+}
+
+.home {
+	margin-top: 150px;
+	text-align: center;
+	opacity: 90%;
+	cursor: pointer;
+
+	a {
+		text-decoration: none;
+		color: $color_1;
+		font-size: 16px;
+		padding: 11px 21px;
+		letter-spacing: 0.3em;
+		border-radius: 4px;
+		background-color: $background-color_1;
+		box-shadow: 0 2px 25px rgba(28, 226, 226, 0.5);
+		transition: all ease 0.4s;
+
+		&:hover {
+			background-color: $background-color_2;
+			box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+			opacity: 90%;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.notFound {
+		font-size: 70px;
+	}
+
+	#glitch {
+		font-size: 15px;
+		font-weight: 300;
+		opacity: 50%;
+		letter-spacing: 0.15em;
+	}
+
+	.home {
+		a {
+			font-size: 13px;
+		}
+	}
+}

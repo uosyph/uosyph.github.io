@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Yousef Saeed</title>
-	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-	<link rel="stylesheet" href="style/css/index/style.css">
-	<script src="javascript/index/bg.js" defer></script>
-	<script src="javascript/index/scroll.js" defer></script>
-	<script type="module" src="javascript/index/title.js" defer></script>
-	<script src="https://kit.fontawesome.com/5225150f52.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://matthew.wagerfield.com/parallax/deploy/jquery.parallax.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yousef Saeed</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="style/css/index/style.css">
+    <script defer type="module" src="js/index/index.js"></script>
 </head>
 <body>
-	<div id="parallax">
-		<div class="layer" data-depth="0.2">
-			<div id="particles-js"></div>
-		</div>
-	</div>
-
-	<section class="aboutSect">
-		<div class="name">
-			<h1>YOUS<span>Ξ</span>F SA<span>Ξ</span><span>Ξ</span>D</h1>
-		</div>
-
-		<div id="glitch">>&nbsp;
-			<div class="text"></div>&nbsp;.
-		</div>
-
-		<div class="about">
-			<p>Soon.</p>
-		</div>
-	</section>
-
-	<section class="contactSect">
-		<div class="contact">
-			<ul class="email-cv">
-				<li><a href="mailto: yousafesaeed@gmail.com" target="_blank">Email</a></li>
-				<li><a href="/Resume.pdf" target="_blank">Resume</a></li>
-			</ul>
-
-			<ul class="soical">
-				<li><a href="https://github.com/yousafesaeed" target="_blank" class="gihub">
-						<i class="fa-brands fa-github"></i></a>
-				</li>
-				<li>
-					<a href="https://linkedin.com/in/yousafesaeed" target="_blank" class="linkedin">
-						<i class="fa-brands fa-linkedin-in"></i></a>
-				</li>
-				<li><a href="https://twitter.com/yousafesaeed" target="_blank" class="twitter">
-						<i class="fa-brands fa-twitter"></i></a>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<footer>
-		<div class="sig">Designed & Built by Yousef Saeed
-			<div class="source">
-				<a href="https://github.com/yousafesaeed/yousafesaeed.github.io" target="_blank">
-					Source Code on GitHub
-				</a>
-			</div>
-		</div>
-	</footer>
+    <header>
+        <h1>Yousef Saeed</h1>
+        <div class="glitch">
+            <div class="text"></div>
+        </div>
+        <p>Have been building the web for the past 3+ years.</p>
+        <nav>
+            <ul class="sections">
+                <li><a class="nav-el" id="nav-el-about" href="#about">About</a></li>
+                <li><a class="nav-el" id="nav-el-skills" href="#skills">Skills</a></li>
+                <li><a class="nav-el" id="nav-el-projects" href="#project">Projects</a></li>
+                <li><a class="nav-el" id="nav-el-contact" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="contact">
+            <li><a href="https://github.com/yousafesaeed"><img src="assets/icons/contact/github.svg" alt="GitHub"></a>
+            </li>
+            <li><a href="https://linkedin.com/in/yousafesaeed/"><img src="assets/icons/contact/linkedin.svg"
+                        alt="linkedIn"></a></li>
+            <li><a href="https://twitter.com/yousafesaeed"><img src="assets/icons/contact/twitter.svg"
+                        alt="Twitter"></a></li>
+            <li><a href="mailto:yousafesaeed@gmail.com"><img src="assets/icons/contact/email.svg" alt="Email"></a></li>
+            <li><a href="/resume.pdf"><button class="resume-btn">Resume</button></a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="about-section" id="about">
+            <h4 class="headers">About</h4>
+            <p>
+                Highly skilled full-stack developer with a passion for building innovative and user-friendly
+                applications.
+                Currently in my senior year pursuing a BSc degree in Management Information Systems.
+            </p>
+            <p>
+                Additionally, I have completed a series coursework that further honed my skills and knowledge.
+                I have completed several personal projects demonstrating a strong command of tools and technologies.
+            </p>
+            <p>My strengths lie in being detail-oriented and self-driven, with a focus on finding solutions that meet
+                business needs. I am constantly striving to improve my problem-solving skills and am always eager to
+                learn and adapt to new technologies.
+            </p>
+        </section>
+        <section class="skills-section" id="skills">
+            <h4>Some of the technologies I've been working with recently</h4>
+            <div class="skills-container">
+                <ul class="skills-list">
+                    <li><img src="assets/icons/skills/typescript.svg" alt="TypeScript"></li>
+                    <li><img src="assets/icons/skills/javascript.svg" alt="JavaScript"></li>
+                    <li><img src="assets/icons/skills/nodejs.svg" alt="Node.js"></li>
+                    <li><img src="assets/icons/skills/express.svg" alt="Express.js"></li>
+                    <li><img src="assets/icons/skills/jasmine.svg" alt="Jasmine"></li>
+                    <li><img src="assets/icons/skills/python.svg" alt="Python"></li>
+                    <li><img src="assets/icons/skills/django.svg" alt="Django"></li>
+                    <li><img src="assets/icons/skills/postgresql.svg" alt="PostgreSQL"></li>
+                    <li><img src="assets/icons/skills/sqlite.svg" alt="SQLite"></li>
+                    <li><img src="assets/icons/skills/mysql.svg" alt="MySQL"></li>
+                    <li><img src="assets/icons/skills/html.svg" alt="HTML"></li>
+                    <li><img src="assets/icons/skills/css.svg" alt="CSS"></li>
+                    <li><img src="assets/icons/skills/sass.svg" alt="Sass"></li>
+                    <li><img src="assets/icons/skills/c.svg" alt="C"></li>
+                    <li><img src="assets/icons/skills/java.svg" alt="Java"></li>
+                    <li><img src="assets/icons/skills/bash.svg" alt="Bash"></li>
+                    <li><img src="assets/icons/skills/linux.svg" alt="linux"></li>
+                    <li><img src="assets/icons/skills/aws.svg" alt="AWS"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
