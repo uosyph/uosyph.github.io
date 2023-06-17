@@ -1,9 +1,21 @@
+@charset "UTF-8";
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 html {
@@ -18,6 +30,11 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  color: #121212;
+  background: #e2e8f0;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,9 +44,38 @@ ul {
   padding-left: 0;
 }
 
-::selection {
-  color: #121212;
-  background: #e2e8f0;
+.btn {
+  padding: 10px 20px;
+  border: unset;
+  border-radius: 15px;
+  color: #e2e8f0;
+  z-index: 1;
+  background: #212121;
+  cursor: pointer;
+  position: relative;
+  font-weight: 1000;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #e2e8f0;
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+.btn:hover {
+  color: #212121;
+}
+.btn:hover::before {
+  width: 100%;
 }
 
 body {
@@ -73,7 +119,7 @@ header .glitch .text {
   display: inline-block;
 }
 header .glitch > .text > .dud {
-  color: #ff0082;
+  color: rgba(35, 111, 211, 0.3647058824);
 }
 header p {
   font-size: 0.95rem;
@@ -97,7 +143,7 @@ header nav ul li {
 header nav ul li .nav-el {
   color: #e2e8f0;
   padding-left: 3rem;
-  opacity: 70%;
+  opacity: 60%;
   transition: 0.3s ease;
 }
 header nav ul li .nav-el:before {
@@ -114,25 +160,30 @@ header nav ul li .nav-el:before {
 }
 header nav ul li .nav-el:hover {
   opacity: 100%;
-  padding-left: 4rem;
-  transition: 0.3s ease;
+  padding-left: 5rem;
+  transition: 0.1s ease;
 }
 header nav ul li .nav-el:hover:before {
-  width: 3rem;
-  transition: 0.3s ease;
+  width: 4rem;
+  transition: 0.1s ease;
 }
 header nav ul li .active-nav-el {
-  opacity: 85%;
-  padding-left: 4rem;
+  opacity: 95%;
+  padding-left: 5rem;
   transition: 0.3s ease;
 }
 header nav ul li .active-nav-el:before {
-  width: 3rem;
+  width: 4rem;
   transition: 0.3s ease;
+}
+header .pulse {
+  animation: pulse 0.7s 2;
 }
 header .contact {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
+  gap: 1.2rem;
   bottom: 0;
   margin-bottom: 3rem;
   align-items: center;
@@ -143,7 +194,6 @@ header .contact li {
 }
 header .contact li a {
   color: #e2e8f0;
-  margin-right: 1.2rem;
   opacity: 70%;
   transition: opacity 0.3s ease;
 }
@@ -157,47 +207,15 @@ header .contact li a img {
   vertical-align: middle;
   height: 1.2rem;
 }
-header .contact .resume-btn {
-  margin-left: 5px;
-  padding: 10px 20px;
-  border: unset;
-  border-radius: 15px;
-  color: #e2e8f0;
-  z-index: 1;
-  background: #212121;
-  cursor: pointer;
-  position: relative;
-  font-weight: 1000;
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 250ms;
-  overflow: hidden;
-}
-header .contact .resume-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  border-radius: 15px;
-  background-color: #e2e8f0;
-  z-index: -1;
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 250ms;
-}
-header .contact .resume-btn:hover {
-  color: #212121;
-}
-header .contact .resume-btn:hover::before {
-  width: 100%;
-}
 
 main {
   color: #e2e8f0;
   height: 100%;
   flex: 1 1 50%;
 }
-main .headers {
+main .header {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 main .about-section {
@@ -206,16 +224,18 @@ main .about-section {
 main .skills-section {
   margin-top: 1.8rem;
 }
+main .skills-section .skills-header {
+  font-weight: 600;
+}
 main .skills-section .skills-list {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  gap: 1.2rem;
   align-items: center;
 }
 main .skills-section .skills-list li {
   display: inline-block;
-  margin-right: 1.2rem;
-  margin-bottom: 1.2rem;
 }
 main .skills-section .skills-list li img {
   color: #000;
@@ -224,6 +244,96 @@ main .skills-section .skills-list li img {
   height: 1.9rem;
   border-radius: 15%;
   opacity: 80%;
+}
+main .projects-section {
+  margin-top: 3rem;
+}
+main .projects-section .project-container {
+  transition: 0.3s ease;
+  margin-bottom: 2.5rem;
+}
+main .projects-section .project-container a {
+  color: #e2e8f0;
+}
+main .projects-section .project-container h3 {
+  display: inline;
+  font-weight: 600;
+  transition: 0.15s ease-in-out;
+}
+main .projects-section .project-container h3::after {
+  content: "🡥";
+  font-size: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+  transition: transform 0.15s ease-in-out;
+}
+main .projects-section .project-container h3:hover {
+  color: rgba(35, 111, 211, 0.3647058824);
+  transition: 0.15s ease-in-out;
+}
+main .projects-section .project-container h3:hover::after {
+  transform: translate(3px, -3px);
+}
+main .projects-section .project-container p {
+  opacity: 80%;
+}
+main .projects-section .project-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+main .projects-section .project-container ul li {
+  font-size: 0.7rem;
+  display: inline-block;
+  background-color: rgba(33, 33, 33, 0.4784313725);
+  padding: 7px 14px;
+  border-radius: 15px;
+}
+main .projects-section .all-projects-link {
+  opacity: 70%;
+  transition: opacity 0.3s ease;
+}
+main .projects-section .all-projects-link:hover {
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}
+main .projects-section .all-projects-link button {
+  margin-top: 0.5rem;
+}
+main .contact-section {
+  margin-top: 3rem;
+}
+main .contact-section p {
+  opacity: 90%;
+}
+main .contact-section p a {
+  color: rgba(35, 111, 211, 0.3647058824);
+  transition: 0.15s ease-in-out;
+}
+main .contact-section p a:hover {
+  opacity: 80%;
+  transition: 0.15s ease-in-out;
+}
+main footer {
+  margin-block: 3rem;
+}
+main footer P {
+  line-height: 0.8rem;
+  max-width: fit-content;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 60%;
+  transition: 0.6s all ease;
+}
+main footer P:hover {
+  opacity: 90%;
+}
+main footer P a {
+  color: #e2e8f0;
+  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -253,7 +363,7 @@ main .skills-section .skills-list li img {
   }
 }
 @media screen and (min-width: 1051px) {
-  .headers {
+  .about-header {
     display: none;
   }
 }
@@ -264,10 +374,6 @@ main .skills-section .skills-list li img {
   header .glitch {
     margin-top: -0.6rem;
   }
-}
-* {
-  outline-width: 1px;
-  outline-color: rgba(255, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,24 +24,41 @@
             <ul class="sections">
                 <li><a class="nav-el" id="nav-el-about" href="#about">About</a></li>
                 <li><a class="nav-el" id="nav-el-skills" href="#skills">Skills</a></li>
-                <li><a class="nav-el" id="nav-el-projects" href="#project">Projects</a></li>
+                <li><a class="nav-el" id="nav-el-projects" href="#projects">Projects</a></li>
                 <li><a class="nav-el" id="nav-el-contact" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <ul class="contact">
-            <li><a href="https://github.com/yousafesaeed"><img src="assets/icons/contact/github.svg" alt="GitHub"></a>
+        <ul class="contact" id="contact-info">
+            <li>
+                <a target="_blank" href="https://github.com/yousafesaeed">
+                    <img src="assets/icons/contact/github.svg" alt="GitHub">
+                </a>
             </li>
-            <li><a href="https://linkedin.com/in/yousafesaeed/"><img src="assets/icons/contact/linkedin.svg"
-                        alt="linkedIn"></a></li>
-            <li><a href="https://twitter.com/yousafesaeed"><img src="assets/icons/contact/twitter.svg"
-                        alt="Twitter"></a></li>
-            <li><a href="mailto:yousafesaeed@gmail.com"><img src="assets/icons/contact/email.svg" alt="Email"></a></li>
-            <li><a href="/resume.pdf"><button class="resume-btn">Resume</button></a></li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/yousafesaeed/">
+                    <img src="assets/icons/contact/linkedin.svg" alt="linkedIn">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://twitter.com/yousafesaeed">
+                    <img src="assets/icons/contact/twitter.svg" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:yousafesaeed@gmail.com">
+                    <img src="assets/icons/contact/email.svg" alt="Email">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="/resume.pdf">
+                    <button class="btn">Resume</button>
+                </a>
+            </li>
         </ul>
     </header>
     <main>
         <section class="about-section" id="about">
-            <h4 class="headers">About</h4>
+            <h4 class="header about-header">About</h4>
             <p>
                 Highly skilled full-stack developer with a passion for building innovative and user-friendly
                 applications.
@@ -51,13 +68,14 @@
                 Additionally, I have completed a series coursework that further honed my skills and knowledge.
                 I have completed several personal projects demonstrating a strong command of tools and technologies.
             </p>
-            <p>My strengths lie in being detail-oriented and self-driven, with a focus on finding solutions that meet
+            <p>
+                My strengths lie in being detail-oriented and self-driven, with a focus on finding solutions that meet
                 business needs. I am constantly striving to improve my problem-solving skills and am always eager to
                 learn and adapt to new technologies.
             </p>
         </section>
         <section class="skills-section" id="skills">
-            <h4>Some of the technologies I've been working with recently</h4>
+            <h4 class="skills-header">Some of the technologies I've been working with recently</h4>
             <div class="skills-container">
                 <ul class="skills-list">
                     <li><img src="assets/icons/skills/typescript.svg" alt="TypeScript"></li>
@@ -81,6 +99,106 @@
                 </ul>
             </div>
         </section>
+        <section class="projects-section" id="projects">
+            <h4 class="header projects-header">Projects</h4>
+            <ul>
+                <li>
+                    <div class="project-container">
+                        <a target="_blank" href="https://github.com/yousafesaeed/chat-app">
+                            <h3>Chat Messaging Web App</h3>
+                        </a>
+                        <p>
+                            Group chat web app that allows users to create an account, login, and engage in
+                            real-time conversations with other users on multiple channels. Users can create new
+                            channels, invite others to channels, and accept or decline invitations from others.
+                        </p>
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>SQLite</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>Sass</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container">
+                        <a target="_blank" href="https://github.com/yousafesaeed/ecommerce-api">
+                            <h3>E-Commerce API</h3>
+                        </a>
+                        <p>
+                            RESTful API for a marketplace connected to a database that allows users to
+                            perform CRUD operations after authorization. Such as signing up, logging in,
+                            and deleting their account. Users can also view, create, and delete products
+                            and make or cancel orders. Product filtering options include category and
+                            popularity. Passwords are hashed for secure data storage.
+                        </p>
+                        <ul>
+                            <li>TypeScript</li>
+                            <li>Node.js</li>
+                            <li>PostgreSQL</li>
+                            <li>Express.js</li>
+                            <li>JWT</li>
+                            <li>Jasmine</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container">
+                        <a target="_blank" href="https://github.com/yousafesaeed/CS50/tree/main/CS50W/network">
+                            <h3>Social Networking Service</h3>
+                        </a>
+                        <p>
+                            Twitter-like social network where users can sign up, log in, post status
+                            updates, edit posts, like other users' posts, and follow other users.
+                        </p>
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>SQLite</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-container">
+                        <a target="_blank" href="https://yousafesaeed.github.io/sorting-visualizer">
+                            <h3>Sorting Algorithm Visualizer</h3>
+                        </a>
+                        <p>
+                            Visualization of various sorting algorithms, including Bubble Sort,
+                            Selection Sort, Insertion Sort, Quick Sort, and Merge Sort.
+                        </p>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <a class="all-projects-link" target="_blank" href="https://github.com/yousafesaeed?tab=repositories">
+                <button class="btn">View all the projects on GitHub</button>
+            </a>
+        </section>
+        <section class="contact-section" id="contact">
+            <h4 class="header contact-header">Contact</h4>
+            <p>
+                Should you require any assistance, have a question, or wish to explore a potential collaboration,
+                please do not hesitate to <a id="reach-link" href="#contact-info">reach out to me</a>.
+            </p>
+        </section>
+        <footer>
+            <p>Designed & Built by Yousef Saeed</p>
+            <p>
+                <a target="_blank" href="https://github.com/yousafesaeed/yousafesaeed.github.io">
+                    Source Code on GitHub
+                </a>
+            </p>
+        </footer>
     </main>
 </body>
 </html>
