@@ -1,4 +1,4 @@
-import { TextScramble } from '../utils/title.js';
+import { TextScramble } from '../utils/scrambler.js';
 
 let phrases = [];
 
