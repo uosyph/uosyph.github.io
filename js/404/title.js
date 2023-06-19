@@ -1,4 +1,4 @@
-import { TextScramble } from '../utils/scrambler.js';
+import { TextScrambler } from '../utils/scrambler.js';
 
 let phrases = [];
 
@@ -51,7 +51,7 @@ switch (Math.floor(Math.random() * (4 - 0 + 1)) + 0) {
 }
 
 const el = document.querySelector('.text');
-const fx = new TextScramble(el);
+const fx = new TextScrambler(el);
 
 let counter = 0;
 const next = () => {

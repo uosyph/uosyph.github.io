@@ -1,34 +1,51 @@
-import { TextScramble } from '../utils/scrambler.js';
+import { TextScrambler } from '../utils/scrambler.js';
 
 // Scrambles and rotates through an array of phrases at a set interval
-// using the TextScramble class and random delay times.
-const phrases = [
-    'Full-Stack Developer'
-];
+// using the TextScrambler class and random delay times.
+function scrambleText() {
+    const phrase = 'Full-Stack Developer';
 
-const el = document.querySelector('.text');
-const fx = new TextScramble(el);
+    const el = document.querySelector('.text');
+    const fx = new TextScrambler(el);
 
-let counter = 0;
-const next = () => {
-    const randomTimeout = Math.floor(Math.random() * 8000) + 2000;
-    fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, randomTimeout);
+    let counter = 0;
+    let isHovering = false;
+    const scramble = () => {
+        const randomTimeout = Math.floor(Math.random() * 7000) + 3000;
+        console.log(randomTimeout);
+        fx.setText(phrase).then(() => {
+            if (isHovering) {
+                setTimeout(scramble, 1000);
+            } else {
+                setTimeout(scramble, randomTimeout);
+            }
+        });
+        counter = (counter + 1) % 1;
+    };
+    scramble();
+
+    el.addEventListener('mouseenter', () => {
+        isHovering = true;
+        scramble();
     });
-    counter = (counter + 1) % phrases.length;
-};
+    el.addEventListener('mouseleave', () => {
+        isHovering = false;
+    });
+}
 
 // Smooth scrolling to all anchor tags with an href starting with '#'.
-const anchors = document.querySelectorAll('a[href^="#"]');
-anchors.forEach(anchor => {
-    anchor.addEventListener('click', function (event) {
-        event.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
+function scrollTo() {
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
+}
 
 // Checks if an element is visible, and toggles a class on another element accordingly.
 function observeTargets() {
@@ -54,29 +71,32 @@ function observeTargets() {
 }
 
 // Adds a pulse animation to the contact info when a button is clicked.
-const reachBtn = document.getElementById("reach-link");
-const contactInfo = document.getElementById("contact-info");
+function handleAnimation() {
+    const reachBtn = document.getElementById("reach-link");
+    const contactInfo = document.getElementById("contact-info");
 
-function handleAnimationEnd() {
-    contactInfo.classList.remove("pulse");
-    contactInfo.removeEventListener("animationend", handleAnimationEnd);
-}
+    function handleAnimationEnd() {
+        contactInfo.classList.remove("pulse");
+        contactInfo.removeEventListener("animationend", handleAnimationEnd);
+    }
 
-reachBtn.addEventListener("click", () => {
-    if (window.innerWidth < 1050) {
-        setTimeout(() => {
+    reachBtn.addEventListener("click", () => {
+        if (window.innerWidth < 1050) {
+            setTimeout(() => {
+                contactInfo.classList.add("pulse");
+                contactInfo.addEventListener("animationend", handleAnimationEnd);
+            }, 500);
+        } else {
             contactInfo.classList.add("pulse");
             contactInfo.addEventListener("animationend", handleAnimationEnd);
-        }, 500);
-    } else {
-        contactInfo.classList.add("pulse");
-        contactInfo.addEventListener("animationend", handleAnimationEnd);
-    }
-});
+        }
+    });
+}
 
-// Calls the functions on page load and adds event listeners
-// to call checkTargets on scroll and resize events.
-next();
+// Calls the functions
+scrambleText();
+scrollTo();
+handleAnimation();
 observeTargets();
 window.addEventListener('scroll', observeTargets);
 window.addEventListener('resize', observeTargets);

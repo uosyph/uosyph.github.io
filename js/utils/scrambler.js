@@ -1,4 +1,4 @@
-export class TextScramble {
+export class TextScrambler {
     constructor(el) {
         this.el = el;
         this.chars = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/';
