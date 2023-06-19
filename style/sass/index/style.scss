@@ -1,7 +1,7 @@
 $main-ff: 'Poppins', sans-serif;
 $bg: #121212;
 $main-font-color: #e2e8f0;
-$accent-color: #236fd35d;
+$accent-color: #2a5a58b2;
 
 @keyframes fade-in {
 	0% {
@@ -231,7 +231,6 @@ header {
 				}
 
 				img {
-					color: #000;
 					filter: invert(1);
 					vertical-align: middle;
 					height: 1.2rem;
@@ -274,7 +273,6 @@ main {
 				display: inline-block;
 
 				img {
-					color: #000;
 					filter: invert(1);
 					vertical-align: middle;
 					height: 1.9rem;
@@ -294,26 +292,26 @@ main {
 
 			a {
 				color: $main-font-color;
-			}
-
-			h3 {
-				display: inline;
-				font-weight: 600;
 				transition: 0.15s ease-in-out;
 
-				&::after {
-					content: '\1F865';
-					font-size: 1rem;
-					margin-left: 1rem;
+				h3 {
+					display: inline;
+					font-weight: 600;
+				}
+
+				svg {
+					vertical-align: middle;
+					align-items: center;
+					width: 1.3rem;
 					display: inline-block;
-					transition: transform 0.15s ease-in-out;
+					margin-left: .5rem;
+					transition: 0.15s ease-in-out;
 				}
 
 				&:hover {
 					color: $accent-color;
-					transition: 0.15s ease-in-out;
 
-					&::after {
+					svg {
 						transform: translate(3px, -3px);
 					}
 				}
