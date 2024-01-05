@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://yousafesaeed.github.io">
+  <a href="https://uosyph.github.io">
     <img src="assets/favicon.ico" width="80px">
   </a>
 </p>
 
 <h1 align="center">
-  <a href="https://yousafesaeed.github.io">yousafesaeed.github.io</a>
+  <a href="https://uosyph.github.io">uosyph.github.io</a>
 </h1>
 
 ## Compile
