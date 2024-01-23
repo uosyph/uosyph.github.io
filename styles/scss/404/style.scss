@@ -1,5 +1,6 @@
 $main-ff: "Poppins", sans-serif;
 $bg-img: url("../../../assets/noise.jpg");
+$btn-bg-img: url("../../../assets/pattern.png");
 $bg-color: #121212;
 $main-font-color: #e2e8f0;
 $accent-color: #2a5a58b2;
@@ -73,40 +74,26 @@ main {
 		}
 	}
 
-	.btn {
-		padding: 10px 20px;
-		border: unset;
-		border-radius: 15px;
+	a {
 		color: $main-font-color;
-		z-index: 1;
-		background: #212121;
-		cursor: pointer;
-		position: relative;
-		font-weight: 900;
-		box-shadow: 4px 8px 19px -3px #00000045;
-		transition: all 250ms;
-		overflow: hidden;
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 0;
-			border-radius: 15px;
-			background-color: $main-font-color;
-			z-index: -1;
-			box-shadow: 4px 8px 19px -3px #00000045;
-			transition: all 250ms;
-		}
+		opacity: 70%;
+		transition: opacity 0.3s ease;
 
 		&:hover {
-			color: #212121;
+			opacity: 100%;
+			transition: opacity 0.3s ease;
+		}
 
-			&::before {
-				width: 100%;
-			}
+		.btn {
+			background: $btn-bg-img fixed;
+			color: #fff;
+			font-weight: 900;
+			padding: 10px 20px;
+			border: unset;
+			border-radius: 15px;
+			position: relative;
+			cursor: pointer;
+			box-shadow: 4px 8px 19px -3px #00000045;
 		}
 	}
 }

@@ -15,11 +15,11 @@
 #### Index page style
 
 ```bash
-sass .\styles\scss\index\style.scss .\styles\css\index\style.css -s compressed --no-source-map
+sass styles/scss/index/style.scss styles/css/index/style.css -s compressed --no-source-map
 ```
 
 #### 404 page style
 
 ```bash
-sass .\styles\scss\404\style.scss .\styles\css\404\style.css -s compressed --no-source-map
+sass styles/scss/404/style.scss styles/css/404/style.css -s compressed --no-source-map
 ```
