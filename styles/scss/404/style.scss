@@ -1,9 +1,12 @@
-$main-ff: "Poppins", sans-serif;
-$bg-img: url("../../../assets/noise.jpg");
-$btn-bg-img: url("../../../assets/pattern.png");
+$main-ff: 'Poppins', sans-serif;
+$bg-img: url('../../../assets/noise.jpg');
+$btn-bg-img: url('../../../assets/pattern.png');
 $bg-color: #121212;
 $main-font-color: #e2e8f0;
-$accent-color: #2a5a58b2;
+
+:root {
+	--accent-color: null;
+}
 
 @keyframes fade-in {
 	0% {
@@ -69,7 +72,7 @@ main {
 
 			& > .char {
 				display: inline-block;
-				color: $accent-color;
+				color: var(--accent-color);
 			}
 		}
 	}

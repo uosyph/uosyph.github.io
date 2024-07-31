@@ -4,7 +4,10 @@ $btn-bg-img: url('../../../assets/pattern.png');
 $bg-color: #121212;
 $main-font-color: #e2e8f0;
 $second-font-color: #ffffffb7;
-$accent-color: #2a5a58b2;
+
+:root {
+	--accent-color: null;
+}
 
 @keyframes fade-in {
 	0% {
@@ -116,7 +119,7 @@ header {
 			display: inline-block;
 
 			& > .char {
-				color: $accent-color;
+				color: var(--accent-color);
 			}
 		}
 	}
@@ -271,7 +274,7 @@ main {
 				content: '\25B9';
 				position: absolute;
 				left: 0;
-				color: $accent-color;
+				color: var(--accent-color);
 			}
 		}
 	}
@@ -306,7 +309,7 @@ main {
 				}
 
 				&:hover {
-					color: $accent-color;
+					color: var(--accent-color);
 
 					svg {
 						transform: translate(3px, -3px);
@@ -361,7 +364,7 @@ main {
 			color: $second-font-color;
 
 			a {
-				color: $accent-color;
+				color: var(--accent-color);
 				transition: 0.15s ease-in-out;
 
 				&:hover {
