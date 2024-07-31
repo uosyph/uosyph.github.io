@@ -1,25 +1,32 @@
 <p align="center">
   <a href="https://uosyph.github.io">
-    <img src="assets/favicon.ico" width="80px">
+    <img src="assets/favicon.ico" width="100px">
   </a>
 </p>
 
-<h1 align="center">
-  <a href="https://uosyph.github.io">uosyph.github.io</a>
-</h1>
+# uosyph.github.io
 
-## Compile
+This repository hosts my personal portfolio website.
+Feel free to [fork this repository](github.com/uosyph/uosyph.github.io/fork/) and use it as a template for your own portfolio.
 
-### Compile scss
+## Getting Started
 
-#### Index page style
+### Prerequisites
 
-```bash
+To compile SCSS to CSS, ensure you have Sass installed.
+
+### Compiling SCSS
+
+To compile the SCSS files, run:
+
+```sh
 sass styles/scss/index/style.scss styles/css/index/style.css -s compressed --no-source-map
-```
-
-#### 404 page style
-
-```bash
 sass styles/scss/404/style.scss styles/css/404/style.css -s compressed --no-source-map
 ```
+
+## Author
+
+**Yousef Saeed**:
+[GitHub](https://github.com/uosyph)
+[LinkedIn](https://linkedin.com/in/uosyph)
+[X](https://twitter.com/uosyph)
