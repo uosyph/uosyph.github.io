@@ -50,7 +50,7 @@ function scrollTo() {
 
 // Checks if an element is visible, and toggles a class on another element accordingly.
 function observeTargets() {
-	const ids = ["about", "skills", "projects", "contact"];
+	const ids = ["about", "skills", "experience", "projects", "contact"];
 
 	const observer = new IntersectionObserver(function (entries) {
 		entries.forEach(function (entry) {
