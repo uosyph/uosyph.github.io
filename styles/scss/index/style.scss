@@ -46,8 +46,8 @@ html {
 }
 
 ::selection {
-	color: $bg-color;
-	background: $main-font-color;
+	color: $main-font-color;
+	background: var(--accent-color);
 }
 
 a {
@@ -231,7 +231,7 @@ main {
 	flex: 1 1 50%;
 
 	.header {
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 	}
@@ -256,7 +256,7 @@ main {
 		.skills-container {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-			gap: 20px;
+			gap: 20px 0;
 			color: $second-font-color;
 
 			.skills-list {
@@ -275,6 +275,112 @@ main {
 				position: absolute;
 				left: 0;
 				color: var(--accent-color);
+			}
+		}
+	}
+
+	.experience-section {
+		margin-top: 3rem;
+		color: $main-font-color;
+
+		.exp-container {
+			margin-bottom: 2.5rem;
+
+			h3 {
+				margin: 0;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-weight: 400;
+				margin: 2px 0;
+			}
+
+			h5 {
+				margin: 7px 0;
+				font-weight: 300;
+				letter-spacing: 0.025em;
+				text-transform: uppercase;
+				opacity: 70%;
+			}
+
+			.exp-desc {
+				color: $second-font-color;
+				margin-bottom: 1.2em;
+				margin-left: 0px;
+
+				ul {
+					list-style: georgian inside;
+				}
+
+				ul li {
+					margin-bottom: 5px;
+				}
+
+				ul li::marker {
+					color: var(--accent-color);
+				}
+			}
+
+			.exp-skills-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.3rem;
+				align-items: center;
+
+				li {
+					color: $main-font-color;
+					font-size: 0.7rem;
+					display: inline-block;
+					background-color: #2121217a;
+					padding: 7px 14px;
+					border-radius: 15px;
+				}
+			}
+		}
+	}
+
+	.education-section {
+		margin-top: 3rem;
+		color: $main-font-color;
+
+		.edu-container {
+			margin-bottom: 2.5rem;
+
+			h3 {
+				margin: 0;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-weight: 400;
+				margin: 2px 0;
+			}
+
+			h5 {
+				margin: 7px 0;
+				font-weight: 300;
+				letter-spacing: 0.025em;
+				text-transform: uppercase;
+				opacity: 70%;
+			}
+
+			.edu-desc {
+				color: $second-font-color;
+				margin-bottom: 1.2em;
+				margin-left: 0px;
+
+				ul {
+					list-style: georgian inside;
+				}
+
+				ul li {
+					margin-bottom: 5px;
+				}
+
+				ul li::marker {
+					color: var(--accent-color);
+				}
 			}
 		}
 	}
