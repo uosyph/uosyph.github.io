@@ -292,7 +292,12 @@ main {
 			}
 
 			h4 {
-				margin: 10px 0;
+				font-weight: 400;
+				margin: 2px 0;
+			}
+
+			h5 {
+				margin: 7px 0;
 				font-weight: 300;
 				letter-spacing: 0.025em;
 				text-transform: uppercase;
@@ -330,6 +335,51 @@ main {
 					background-color: #2121217a;
 					padding: 7px 14px;
 					border-radius: 15px;
+				}
+			}
+		}
+	}
+
+	.education-section {
+		margin-top: 3rem;
+		color: $main-font-color;
+
+		.edu-container {
+			margin-bottom: 2.5rem;
+
+			h3 {
+				margin: 0;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-weight: 400;
+				margin: 2px 0;
+			}
+
+			h5 {
+				margin: 7px 0;
+				font-weight: 300;
+				letter-spacing: 0.025em;
+				text-transform: uppercase;
+				opacity: 70%;
+			}
+
+			.edu-desc {
+				color: $second-font-color;
+				margin-bottom: 1.2em;
+				margin-left: 0px;
+
+				ul {
+					list-style: georgian inside;
+				}
+
+				ul li {
+					margin-bottom: 5px;
+				}
+
+				ul li::marker {
+					color: var(--accent-color);
 				}
 			}
 		}
