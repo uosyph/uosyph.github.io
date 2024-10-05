@@ -557,3 +557,10 @@ main {
 		}
 	}
 }
+
+@media (max-height: 600px) {
+	.contact {
+		margin-top: 40px;
+		position: relative !important;
+	}
+}
