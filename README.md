@@ -24,6 +24,8 @@ sass styles/scss/index/style.scss styles/css/index/style.css -s compressed --no-
 sass styles/scss/404/style.scss styles/css/404/style.css -s compressed --no-source-map
 ```
 
+You can add the `--watch` flag to automatically update the code during development.
+
 ## Author
 
 **Yousef Saeed**:
