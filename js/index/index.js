@@ -52,16 +52,22 @@ function scrollTo() {
 function observeTargets() {
 	const ids = ["about", "skills", "experience", "education", "projects", "contact"];
 
+	// Create IntersectionObserver with rootMargin to adjust the triggering range
 	const observer = new IntersectionObserver(function (entries) {
 		entries.forEach(function (entry) {
 			const id = entry.target.id;
 			const element = document.getElementById("nav-el-" + id);
-			if (entry.intersectionRatio > 0.5) {
+
+			// Activate based on intersectionRatio and ensure it's above a minimal threshold
+			if (entry.intersectionRatio > 0.1) {
 				element.classList.add("active-nav-el");
 			} else {
 				element.classList.remove("active-nav-el");
 			}
 		});
+	}, {
+		rootMargin: "-50px 0px -50px 0px",
+		threshold: 0.1
 	});
 
 	ids.forEach(function (id) {
