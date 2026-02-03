@@ -255,26 +255,45 @@ main {
 
 		.skills-container {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-			gap: 20px 0;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 3rem;
+			margin-top: 2rem;
 			color: $second-font-color;
 
-			.skills-list {
-				padding: 0;
-				margin: 0;
-			}
+			.skill-category {
+				h5 {
+					color: var(--accent-color);
+					margin: 0 0 1rem 0;
+					font-size: 0.9rem;
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					font-weight: 500;
+					opacity: 0.8;
+				}
 
-			.skills-list li {
-				position: relative;
-				padding-left: 20px;
-				margin-bottom: 4px;
-			}
+				.skill-tags {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.6rem;
+					padding: 0;
+					margin: 0;
 
-			.skills-list li::before {
-				content: '\25B9';
-				position: absolute;
-				left: 0;
-				color: var(--accent-color);
+					li {
+						color: $main-font-color;
+						font-size: 0.8rem;
+						background-color: #2121217a;
+						padding: 6px 14px;
+						border-radius: 15px;
+						border: 1px solid #ffffff0d;
+						transition: all 0.3s ease;
+
+						&:hover {
+							background-color: #ffffff0d;
+							border-color: var(--accent-color);
+							transform: translateY(-2px);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -294,6 +313,15 @@ main {
 			h4 {
 				font-weight: 400;
 				margin: 2px 0;
+
+				a {
+					color: var(--accent-color);
+					transition: 0.3s ease;
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
 			}
 
 			h5 {
@@ -307,18 +335,30 @@ main {
 			.exp-desc {
 				color: $second-font-color;
 				margin-bottom: 1.2em;
-				margin-left: 0px;
+				margin-top: 0.8rem;
+				line-height: 1.6;
 
 				ul {
-					list-style: georgian inside;
+					padding: 0;
+					margin: 0;
+
+					li {
+						position: relative;
+						padding-left: 20px;
+						margin-bottom: 8px;
+
+						&::before {
+							content: '•';
+							position: absolute;
+							left: 0;
+							color: var(--accent-color);
+							font-weight: bold;
+						}
+					}
 				}
 
-				ul li {
-					margin-bottom: 5px;
-				}
-
-				ul li::marker {
-					color: var(--accent-color);
+				p {
+					margin: 0;
 				}
 			}
 
