@@ -93,6 +93,8 @@ header {
 	color: $main-font-color;
 	height: 100vh;
 	flex: 1 1 50%;
+	max-width: 50%;
+	min-width: 0;
 	top: 0;
 	position: sticky;
 	align-self: flex-start;
@@ -229,6 +231,8 @@ header {
 main {
 	height: 100%;
 	flex: 1 1 50%;
+	max-width: 50%;
+	min-width: 0;
 
 	.header {
 		font-size: 1.3rem;
@@ -254,16 +258,17 @@ main {
 		}
 
 		.skills-container {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 3rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
 			margin-top: 2rem;
 			color: $second-font-color;
+			overflow: hidden;
 
 			.skill-category {
 				h5 {
 					color: var(--accent-color);
-					margin: 0 0 1rem 0;
+					margin: 0 0 0.3rem 0;
 					font-size: 0.9rem;
 					text-transform: uppercase;
 					letter-spacing: 0.05em;
@@ -271,30 +276,76 @@ main {
 					opacity: 0.8;
 				}
 
-				.skill-tags {
-					display: flex;
-					flex-wrap: wrap;
-					gap: 0.6rem;
-					padding: 0;
-					margin: 0;
+				.skill-track {
+					width: 100%;
+					overflow: hidden;
+					padding: 3px 0;
+					mask-image: linear-gradient(
+						to right,
+						transparent,
+						black 10%,
+						black 90%,
+						transparent
+					);
 
-					li {
-						color: $main-font-color;
-						font-size: 0.8rem;
-						background-color: #2121217a;
-						padding: 6px 14px;
-						border-radius: 15px;
-						border: 1px solid #ffffff0d;
-						transition: all 0.3s ease;
+					.skill-tags {
+						display: flex;
+						flex-wrap: nowrap; // Ensure they stay on one line
+						gap: .7rem;
+						padding: 0;
+						margin: 0;
+						width: max-content;
 
-						&:hover {
-							background-color: #ffffff0d;
-							border-color: var(--accent-color);
-							transform: translateY(-2px);
+						li {
+							color: $main-font-color;
+							font-size: 0.85rem;
+							background-color: #2121217a;
+							padding: 8px 18px;
+							border-radius: 20px;
+							border: 1px solid #ffffff0d;
+							transition: all 0.3s ease;
+							flex-shrink: 0; // Prevent shrinking
+							white-space: nowrap;
+
+							&:hover {
+								background-color: #ffffff0d;
+								border-color: var(--accent-color);
+								transform: translateY(-2px);
+							}
 						}
+					}
+
+					&.left .skill-tags {
+						animation: scroll-left 30s linear infinite;
+					}
+
+					&.right .skill-tags {
+						animation: scroll-right 30s linear infinite;
+					}
+
+					&:hover .skill-tags {
+						animation-play-state: paused;
 					}
 				}
 			}
+		}
+	}
+
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes scroll-right {
+		0% {
+			transform: translateX(-50%);
+		}
+		100% {
+			transform: translateX(0);
 		}
 	}
 
@@ -554,6 +605,7 @@ main {
 
 	header {
 		flex: 1 1 100%;
+		max-width: 100%;
 		position: initial;
 		height: 100%;
 
@@ -575,8 +627,11 @@ main {
 		}
 	}
 
-	main .about-section {
-		margin-top: 5rem;
+	main {
+		max-width: 100%;
+		.about-section {
+			margin-top: 5rem;
+		}
 	}
 }
 
