@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://uosyph.github.io">
-    <img src="assets/favicon.ico" width="120px">
+    <img src="assets/logo.png" width="40px">
   </a>
 </p>
 

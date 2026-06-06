@@ -4,7 +4,7 @@ import { TextScrambler } from "../utils/scrambler.js";
 // Adds random delay between scrambles.
 // Scrambles the text indefinitely while hovering on it.
 function scrambleText() {
-	const phrase = "Full-Stack Developer";
+	const phrase = "Full-Stack Engineer";
 	const el = document.querySelector(".text");
 	const fx = new TextScrambler(el);
 	let counter = 0;

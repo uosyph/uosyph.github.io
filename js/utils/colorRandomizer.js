@@ -1,14 +1,19 @@
 const colors = [
-    '#6366f1b2',
-    '#06b6d4b2',
-    '#10b981b2',
-    '#f59e0bb2',
-    '#ef4444b2',
-    '#8b5cf6b2',
-    '#ec4899b2',
-    '#3b82f6b2',
-    '#14b8a6b2',
-    '#f97316b2' 
+    '#ffaeb9b2',
+    '#ffb796b2',
+    '#ffd17ab2',
+    '#e2f099b2',
+    '#9eeeb0b2',
+    '#9be6dbb2',
+    '#9cdbf7b2',
+    '#a3c3fbb2',
+    '#c2b6fdb2',
+    '#e5b3fbb2',
+    '#f7b0ecd2',
+    '#ffc29cb2',
+    '#ebefa2b2',
+    '#b4f0caf2',
+    '#b1dbfbb2',
 ];
 
 function setRandomAccentColor() {

@@ -390,22 +390,17 @@ main {
 				line-height: 1.6;
 
 				ul {
+					list-style: georgian inside;
 					padding: 0;
 					margin: 0;
 
 					li {
-						position: relative;
-						padding-left: 20px;
 						margin-bottom: 8px;
-
-						&::before {
-							content: '•';
-							position: absolute;
-							left: 0;
-							color: var(--accent-color);
-							font-weight: bold;
-						}
 					}
+				}
+
+				ul li::marker {
+					color: var(--accent-color);
 				}
 
 				p {
